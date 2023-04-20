@@ -1,0 +1,180 @@
+body {
+    background-color: whitesmoke;
+}
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap'); */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    color: #d16923;
+    border-radius: 10px;
+    background-color: #d6d6d6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;    
+    font-size: 24px;
+}
+
+/* .card-container {
+    display: flex;
+} */
+
+.card-container {
+    border: 1px solid #d6d6d6;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #d6d6d6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    /* background-color: #d6d6d6; */
+    
+}
+.card img {
+    width: 100px;
+}
+
+.items {
+    width: 30px;
+}
+
+/* Delivery Address */
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.userAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 50px 0 50px;
+    border: 1px solid whitesmoke;
+    background-color: #d6d6d6;
+}
+
+.userAdd p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+/* Payment Method */
+
+.useCou {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #d6d6d6;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.useCou h3 {
+    margin-left: 50px;
+}
+
+#coupon {
+    width: 160px;
+    height: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;    
+    color: whitesmoke;
+    appearance: none;
+    outline: none;
+    padding: 5px;
+    background-color: #d16923;
+    border: none;
+    border-radius: 10px;
+}
+
+.usePay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border: 1px solid #d6d6d6;
+    background-color: #d6d6d6;
+}
+
+.usePay h3 {
+    margin-left: 50px;
+}
+
+#payment {
+    width: 160px;
+    height: 50px;
+    margin-right: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;       
+    color: whitesmoke;
+    appearance: none;
+    outline: none;
+    padding: 5px;
+    background-color: #d16923;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Delivery Note */
+
+.delivery-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    background-color: #d6d6d6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.note textarea {
+    width: 100%;
+    background-color: #d6d6d6;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    
+}
+
+.checkOut {
+    margin: 50px;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+#cheBut {
+    width: 160px;
+    height: 50px;
+    color: whitesmoke;
+    background-color: #d16923;
+    border-color: #d16923;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;   
+}
+
+footer {
+    background-color: #d16923;
+    height: 100px;
+}
