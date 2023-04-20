@@ -4,10 +4,180 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <script src="https://kit.fontawesome.com/c6771b9339.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index-style.css">
+  <title>Animx | Bringing Your Favorite Anime and Manga to Life</title>
 </head>
 <body>
-  <h1>HELLO ROLD</h1>
-  
+  <div class="page-container">
+    <!-- Nav -->
+    <nav class="d-flex">
+      <!-- Brand -->
+      <div class="brand-container d-flex">
+        <a href="#" class="brand "><span>ANIMX</span></a>
+      </div>
+
+      <!-- nav items -->
+      <ul class="nav-items-container d-flex">
+        <li class="nav-items"><a href="#" class="nav-items1"><span>Manga</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items3"><span>Merchandise</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items4"><span>FAQ</span></a></li>
+      </ul>
+
+      <!-- Login/Cart -->
+      <ul class="login-cart-container d-flex">
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+      </ul>
+
+      <!-- Burger/Menu Button -->
+        <button class="burger-btn"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+      <!-- HEADER -->
+    <header class="d-flex flex-col">
+      <div class="slogan-body d-flex flex-col">
+        <div class="slogan-container d-flex flex-col">
+          <p class="slogan">Bring Your Favorite Anime and Manga to Life</p>
+        </div>
+      </div>
+      <div class="search-bar d-flex">
+        <input type="search" placeholder="Search">
+        <button class="filter-btn" class="d-flex">
+          <span>
+            Filter
+          </span>
+          <i class="fa-solid fa-filter"></i>
+        </button>
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </header>
+      
+    <!-- section body -->
+    <div class="section-body1 d-flex flex-col">
+      <div class="carousel">
+        <!-- FUTURE CAROUSEL HERE -->
+      </div>
+      <div class="section-container d-flex">
+        <div class="section-container-left d-flex flex-col">
+          <!-- Manga Section -->
+          <section class="section d-flex flex-col">
+            <div class="section-header d-flex">
+              <span class="section-name">Manga</span>
+              <a href="#" ><button class="viewmore-btn transition-default">View More</button></a>
+            </div>
+            <!-- Card container -->
+            <div class="section-body d-flex">
+              <!-- card group -->
+              <div class="card-group d-flex flex-col">
+                <!-- manga-card-# -->
+                <div class="card manga-card-1 d-flex flex-col">
+                  <div class="quick-view-container d-flex">
+                    <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
+                  </div>
+                  <div class="actions-container d-flex">
+                    <!-- action buttons -->
+                    <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
+                    <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
+                  </div>
+                </div>
+                <!-- card details -->
+                <div class="card-details">
+                  <p class="card-name">Tensei Shitara Slime</p>
+                  <ul class="card-tags d-flex">
+                    <span class="genre">Genre: &nbsp;</span>
+                    <li>Action, &nbsp;</li>
+                    <li>Isekai, &nbsp</li>
+                    <li>Fantasy</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- card group end-->
+            </div>
+            <!-- Card container end-->
+          </section>
+          <!-- Manga Section end-->
+          <!-- Anime Section -->
+          <section class="section d-flex flex-col">
+            <div class="section-header d-flex">
+              <span class="section-name">Anime</span>
+              <a href="#" ><button class="viewmore-btn transition-default">View More</button></a>
+            </div>
+            <!-- Card container -->
+            <div class="section-body d-flex">
+              <!-- card group -->
+              <div class="card-group d-flex flex-col">
+                <!-- anime-card-# -->
+                <div class="card anime-card-1 d-flex flex-col">
+                  <div class="quick-view-container d-flex">
+                    <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
+                  </div>
+                  <div class="actions-container d-flex">
+                    <!-- action buttons -->
+                    <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
+                    <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
+                  </div>
+                </div>
+                <!-- card details -->
+                <div class="card-details">
+                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
+                  <ul class="card-tags d-flex">
+                    <span class="genre">Genre:&nbsp;</span>
+                    <li><span>Slice of Life,&nbsp;</span></li>
+                    <li>Romance,&nbsp;</li>
+                    <li>Comedy</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- card group end-->
+            </div>
+            <!-- Card container end-->
+          </section>
+          <!-- Anime Section end-->
+        </div>
+        <div class="section-container-right d-flex">
+          <!-- Merchandise Sections -->
+          <section class="merchandise">
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- section body end-->
+    <footer class="d-flex flex-col">
+      <div class="footer-contacts-body d-flex">
+        <div class="footer-contacts-container d-flex">
+          <div class="footer-contacts-left">
+            <p>Follow Us</p>
+            <ul class="footer-social-icons d-flex">
+              <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+          </div>
+          <div class="footer-contacts-right">
+            <p>Contact Us</p>
+            <ul class="footer-email">
+              <li><a href="#"><span>help@animx.com</span></a></li>
+              <li><a href="#"><span>support@animx.com</span></a></li>
+              <li><a href="#"><span>order@animx.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base d-flex">
+        <span>
+          © 2023 Animx ARR. Images are subject to copyright from their respective publishers.
+          Business Registration No.: 09XXX-XXXX-XXXXX. Philippine National Book Development Board Registered Book Seller and Commercial Book Importer.
+        </span>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
