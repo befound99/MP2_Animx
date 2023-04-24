@@ -297,17 +297,37 @@ section {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 }
 /* Card and Card Details */
-.card-group {
+.card-group-manga {
   margin: 1rem;
   width: 200px;
 }
+.card-group-anime {
+  margin: 1rem;
+  width: 300px;
+}
 /* card cover */
-.card {
+.card-manga {
   background-color: lightsalmon;
   height: 300px;
   background-size: cover;
   background-position: center;
   justify-content: end;
+  transition: all 250ms;
+}
+.card-manga:hover {
+  transform: scale(1.2);
+}
+.card-anime {
+  background-color: lightsalmon;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  justify-content: end;
+  transition: all 250ms;
+  overflow: hidden;
+}
+.card-anime:hover {
+  transform: scale(1.2);
 }
 .manga-card-1 {
   background-image: url(/assets/images/Tensei\ Shitara\ Slime.jpg);
@@ -397,7 +417,7 @@ section {
 }
 /* Left Section */
 .section-container-left {
-  flex-grow: 1;
+  width: 70%;
   padding-block: 1rem;
   padding-inline: clamp(0.1px,2vw,1rem);
 }
@@ -417,7 +437,7 @@ section {
 .section-body {
   flex-grow: 1;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 @media (width <= 502px){
   .section-body {
@@ -426,7 +446,16 @@ section {
 } 
 /* Anime section */
 .anime-card-1 {
-  background-image: url(/assets/images/The\ Angel\ Next\ Door.webp);
+  background-image: url(/assets/images/The\ Angel\ Next\ Door.jpg);
+}
+.anime-card-2 {
+  background-image: url(/assets/images/Oshi-no-ko-anime.jpg);
+}
+.anime-card-3{
+  background-image: url(/assets/images/kimetsu-no-yaiba-katanakaji-no-sato-hen-1680122874.jpg);
+}
+.anime-card-4 {
+  background-image: url(/assets/images/mas);
 }
 
 /* Right Section */
@@ -437,9 +466,13 @@ section {
 }
 @media (width <= 1000px){
   .section-container-right {
-  height: 50vh;
-  width: 100%;
-}}
+    height: 50vh;
+    width: 100%;
+  }
+  .section-container-left {
+    width: 100%;
+  }
+}
 
 /* Merchandise */
 .merchandise {
