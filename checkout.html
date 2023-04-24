@@ -7,54 +7,60 @@
   <link rel="stylesheet" href="assets/css/checkout-style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/422ef675b8.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
   <title>ANIMX Check Out Page</title>
 </head>
 <body>
+  <div class="page-container">
+    <!-- Nav -->
+    <nav class="d-flex">
+      <!-- Brand -->
+      <div class="brand-container d-flex">
+        <a href="index.html" class="brand "><span>ANIMX</span></a>
+      </div>
 
-  <!-- Product Bar -->
+      <!-- nav items -->
+      <ul class="nav-items-container d-flex">
+        <li class="nav-items"><a href="#" class="nav-items1"><span>Manga</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
+        <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items4"><span>FAQ</span></a></li>
+      </ul>
 
-  <div class="container">
-    <div>Product</div>
-    <div>Price</div>
-    <div>Quantity</div>
-    <div>Total</div>
+      <!-- Login/Cart -->
+      <ul class="login-cart-container d-flex">
+        <li class="cart"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span>0</span></li>
+        <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+      </ul>
+    </nav>
   </div>
+
+  <!-- Products Section -->
+  
+  <div class="products-container">
+    <div class="products-header">
+      <h5 class="product-title">Product</h5>
+      <h5 class="price">Price</h5>
+      <h5 class="quantity">Quantity</h5>
+      <h5 class="total">Total</h5>
+    </div>
+
+    <div class="products">
+    
+    </div>
+
+  </div>
+    
+ 
+  
 
   <br>
 
 <!-- Product Section -->
 
-  <div class="card-container">
-    <div class="card">
-        <img src="assets/images/overlord1.jpg" alt="overlord cover">
-      <div>
-        ₱ 1999.00
-      </div>
-      <div class="quantity">
-        <button>-</button>
-        <input class="items" type="number">
-        <button>+</button>
-      </div>
-      <div>₱ 999.00</div>
-    </div>
-
-    <!-- <br> -->
-
-    <div class="card">
-      <img src="assets/images/overlord1.jpg" alt="overlord cover">
-    <div>
-      ₱ 1999.00
-    </div>
-    <div class="quantity">
-      <button>-</button>
-      <input class="items" type="number">
-      <button>+</button>
-    </div>
-    <div>₱ 999.00</div>
-  </div>
-    
-  </div>
+  
+  
 
   <br>
 
@@ -111,7 +117,7 @@
       <div class="checkOut">
       
         <div>
-          <h2>Sub Total ₱ 1000.00</h2>
+          <h2 class="total">Total ₱</h2>
         </div>
 
         <div>
@@ -128,7 +134,7 @@
 
   <footer></footer>
     
- 
+  <script src="assets/script/index-script.js"></script>
   <script src="assets/script/check-out-script.js"></script>
 </body>
 </html>
