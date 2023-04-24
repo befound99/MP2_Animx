@@ -24,14 +24,14 @@
       <ul class="nav-items-container d-flex">
         <li class="nav-items"><a href="#" class="nav-items1"><span>Manga</span></a></li>
         <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
-        <li class="nav-items"><a href="#" class="nav-items3"><span>Merchandise</span></a></li>
-        <li class="nav-items"><a href="#" class="nav-items4"><span>FAQ</span></a></li>
+        <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items4"><span id="faqBtn">FAQ</span></a></li>
       </ul>
 
       <!-- Login/Cart -->
       <ul class="login-cart-container d-flex">
-        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+        <li class="cart"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span>0</span></li>
+        <li><a href="#"><i class="fa-solid fa-circle-user" id="userLoginBtn"></i></a></li>
       </ul>
 
       <!-- Burger/Menu Button -->
@@ -72,9 +72,40 @@
             <!-- Card container -->
             <div class="section-body d-flex">
               <!-- card group -->
+              <!-- <button class="add-to-cart-btn">button</button>
+              <button class="add-to-cart-btn">button</button>
+              <button class="add-to-cart-btn2">button</button>
+              <button class="add-to-cart-btn2">button</button> -->
               <div class="card-group d-flex flex-col">
-                <!-- manga-card-# -->
+                <!-- manga-card-1 -->
                 <div class="card manga-card-1 d-flex flex-col">
+                  <div class="action-div d-flex flex-col opacity opacity:hover">
+                    <div class="quick-view-container">
+                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
+                    </div>
+                    <div class="actions-container">
+                      <!-- action buttons -->
+                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
+                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
+                    </div>
+                </div>
+                </div>
+                <!-- card details -->
+                <div class="card-details">
+                  <p class="card-name">Tensei Shitara Slime</p>
+                  <ul class="card-tags d-flex">
+                    <span class="genre">Genre: &nbsp;</span>
+                    <li>Action, &nbsp;</li>
+                    <li>Isekai, &nbsp</li>
+                    <li>Fantasy</li>
+                  </ul>
+                  <p class="card-price">₱ 1000.00</p>
+                </div>
+              </div>
+              <div class="card-group d-flex flex-col">
+                <!-- manga-card-2 -->
+                <div class="card manga-card-2 d-flex flex-col">
                   <div class="quick-view-container d-flex">
                     <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
                   </div>
@@ -87,15 +118,80 @@
                 </div>
                 <!-- card details -->
                 <div class="card-details">
-                  <p class="card-name">Tensei Shitara Slime</p>
+                  <p class="card-name">Overlord</p>
                   <ul class="card-tags d-flex">
                     <span class="genre">Genre: &nbsp;</span>
                     <li>Action, &nbsp;</li>
                     <li>Isekai, &nbsp</li>
                     <li>Fantasy</li>
                   </ul>
+                  <p class="card-price">₱ 2000.00</p>
                 </div>
               </div>
+              <div class="card-group d-flex flex-col">
+
+                <!-- Manga Card 3 -->
+                <div class="card manga-card-3 d-flex flex-col">
+                  <div class="quick-view-container d-flex">
+                    <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
+                  </div>
+                  <div class="actions-container d-flex">
+                    <!-- action buttons -->
+                    <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
+                    <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
+                  </div>
+                </div>
+                   <!-- card details -->
+                  <div class="card-details">
+                  <p class="card-name">Campfire Cooking in Another World with My Absurd Skill</p>
+                  <ul class="card-tags d-flex">
+                    <span class="genre">Genre: &nbsp;</span>
+                    <li>Action, &nbsp;</li>
+                    <li>Isekai, &nbsp</li>
+                    <li>Fantasy</li>
+                  </ul>
+                  <p class="card-price">₱ 2000.00</p>
+                </div>
+              </div>
+                <!-- Manga Card 4 -->
+                <div class="card-group d-flex flex-col">
+
+                <div class="card manga-card-4 d-flex flex-col">
+                  <div class="quick-view-container d-flex">
+                    <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
+                  </div>
+                  <div class="actions-container d-flex">
+                    <!-- action buttons -->
+                    <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
+                    <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
+                  </div>
+                </div>
+                <div class="card-details">
+                  <p class="card-name">Handyman Saitou in Another World</p>
+                  <ul class="card-tags d-flex">
+                    <span class="genre">Genre: &nbsp;</span>
+                    <li>Action, &nbsp;</li>
+                    <li>Isekai, &nbsp</li>
+                    <li>Fantasy</li>
+                  </ul>
+                  <p class="card-price">₱ 2000.00</p>
+                </div>
+                </div>
+                
+                  <div>
+                    <img src="assets/images/OPM.jpg" alt="#">
+                    <ul>
+                      <li class="name">OPM</li>
+                      <li class="productId">00</li>
+                      <li class="price">100</li>
+                      <li class="tag">OPM</li>
+                      <li><button class="add-to-cart-btn">button</button></li>
+                    </ul>
+                    <!-- <button class="add-to-cart-btn">0</button> -->
+                  </div>
+                  </div>
               <!-- card group end-->
             </div>
             <!-- Card container end-->
@@ -148,6 +244,58 @@
         </div>
       </div>
     </div>
+    
+
+    <!-- Modal FAQ -->
+    <div id="faqModal" class="modalFaq">
+      <!-- Modal content -->
+      <div class="modal-content-faq">
+        <span class="closeFaq">&times;</span>
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">What are the shipping options?</div>
+            <div class="accordion-content">
+              <p>We offer standard and express shipping options. Standard shipping takes 5-7 business days, while express shipping takes 2-3 business days.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">What payment methods do you accept?</div>
+            <div class="accordion-content">
+              <p>We accept all major credit cards, PayPal, and Apple Pay.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Can I return an item?</div>
+            <div class="accordion-content">
+              <p>Yes, we accept returns within 30 days of delivery. Please contact us to initiate the return process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Log in Modal -->
+    <button id="loginBtn">Log in</button>
+
+    <div id="loginModal" class="modalLogin">
+      <div class="modal-content-login">
+        <span class="closeLogin">&times;</span>
+        <h2>Log in</h2>
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Log in</button>
+        </form>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+    </div>
+
+
+    
+
     <!-- section body end-->
     <footer class="d-flex flex-col">
       <div class="footer-contacts-body d-flex">
@@ -179,5 +327,7 @@
       </div>
     </footer>
   </div>
+  <script src="assets/script/index-script.js"></script>
+  <script src="assets/script/check-out-script.js"></script>
 </body>
 </html>
