@@ -1,28 +1,40 @@
 {
-  "animes": [
+  "animes" : [
+    {
+      "title": "Mashle",
+      "genre": "Parody, Action, School Life",
+      "image": "/assets/images/mashle-1680202211.png",
+      "price": "3400"
+    },
+    {
+      "title": "Kimetsu no Yaiba",
+      "genre": "Action, Adventure, Demons",
+      "image": "/assets/images/kimetsu-no-yaiba-katanakaji-no-sato-hen-1680122874.jpg",
+      "price": "3600"
+    },
     {
       "title": "[Oshi no Ko]",
       "genre": "Reincarnation, Psychological, Supernatural",
-      "image": "assets/images/Oshi-no-ko-anime.jpg",
-      "price": "3,723"
-    },
-    {
-      "title": "Blue Lock",
-      "genre": "Action, Sports, School Life",
-      "image": "assets/images/blue-lock-yoichi-isagi-meguru-bachira-hyoma-chigiri-932@0@h-preview.jpg",
-      "price": "3,265"
+      "image": "/assets/images/Oshi-no-ko-anime.jpg",
+      "price": "3426"
     },
     {
       "title": "My Hero Academia",
-      "genre": "Action, Superhero, Monsters",
-      "image": "assets/images/my-hero-academia-anime.jpg",
-      "price": "3,432"
+      "genre": "Superhero, Action, School Life",
+      "image": "/assets/images/587749-Blonde-Boy.jpg",
+      "price": "3500"
     },
     {
-      "title": "The Rising of the Shield Hero",
-      "genre": "Reincartaion, Psychological, Supernatural",
-      "image": "assets/images/The Rising of the Shield Hero-anime.jpg",
-      "price": "3,723"
+      "title": "My Love Story With Yamada-kun at Lv999",
+      "genre": "Romance, Comedy, Video Games",
+      "image": "/assets/images/yamada-xmas.jpg",
+      "price": "3400"
+    },
+    {
+      "title": "Tengoku-Daimakyou",
+      "genre": "Survival, Adventure, Monsters",
+      "image": "/assets/images/Tengoku Daimakyou.jpg",
+      "price": "3426"
     }
-  ] 
+  ]
 }
