@@ -469,26 +469,72 @@ section {
   font-weight: 700;
   font-size: clamp(14px, 0.8vw, 0.8vw);
 }
-/* Anime section */
-.anime-card-1 {
-  background-image: url(/assets/images/The\ Angel\ Next\ Door.jpg);
-}
-.anime-card-2 {
-  background-image: url(/assets/images/Oshi-no-ko-anime.jpg);
-}
-.anime-card-3{
-  background-image: url(/assets/images/kimetsu-no-yaiba-katanakaji-no-sato-hen-1680122874.jpg);
-}
-.anime-card-4 {
-  background-image: url(/assets/images/blue-lock-yoichi-isagi-meguru-bachira-hyoma-chigiri-932@0@h-preview.jpg);
-}
-.anime-card-5 {
-  background-image: url(/assets/images/my-hero-academia-anime.jpg);
-}
-.anime-card-6 {
-  background-image: url(/assets/images/The\ Rising\ of\ the\ Shield\ Hero-anime.jpg);
-}
 
+/* Anime Cards */
+.card-group-anime {
+  margin: 0 1rem 1rem 1rem;
+}
+.card-anime {
+  display: flex;
+  position: relative;
+  height: clamp(180px, 10vw, 10vw);
+  width: clamp(270px, 15vw, 15vw);
+  display: flex;
+  flex-direction: column;
+  transition: all 250ms;
+}
+.card-anime > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.anime-action-div {
+  flex-grow: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: all 250ms;
+}
+.anime-action-div:hover {
+  opacity: 100%;
+}
+.anime-quickview-container {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+.anime-quickview-container button {
+  border: 0;
+  border-radius: 5px;
+  background-color: #D16923;
+  color: whitesmoke;
+  padding: 5px 10px;
+  font-size: clamp(12px, 1vw, 1vw);
+  cursor: pointer;
+  transition: all 250ms;
+}
+.anime-quickview-container button:hover {
+  transform: scale(1.1);
+}
+/* Anime Details */
+.anime-title {
+  font-weight: 800;
+  color: #D16923;
+  font-size: clamp(20px, 1vw, 1vw);
+}
+.anime-genre {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: clamp(14px, 0.8vw, 0.8vw);
+}
+.anime-price {
+  color: #4e8f0c;
+}
 /* Right Section */
 .section-container-right {
   width: 30%;

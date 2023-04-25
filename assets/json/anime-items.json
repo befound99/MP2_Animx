@@ -2,27 +2,27 @@
   "animes": [
     {
       "title": "[Oshi no Ko]",
-      "Genre": "Reincartaion, Psychological, Supernatural",
+      "genre": "Reincarnation, Psychological, Supernatural",
       "image": "assets/images/Oshi-no-ko-anime.jpg",
-      "Price": "3,723"
+      "price": "3,723"
     },
     {
-      "title": "[Oshi no Ko]",
-      "Genre": "Reincartaion, Psychological, Supernatural",
-      "image": "assets/images/Oshi-no-ko-anime.jpg",
-      "Price": "3,723"
+      "title": "Blue Lock",
+      "genre": "Action, Sports, School Life",
+      "image": "assets/images/blue-lock-yoichi-isagi-meguru-bachira-hyoma-chigiri-932@0@h-preview.jpg",
+      "price": "3,265"
     },
     {
-      "title": "[Oshi no Ko]",
-      "Genre": "Reincartaion, Psychological, Supernatural",
-      "image": "assets/images/Oshi-no-ko-anime.jpg",
-      "Price": "3,723"
+      "title": "My Hero Academia",
+      "genre": "Action, Superhero, Monsters",
+      "image": "assets/images/my-hero-academia-anime.jpg",
+      "price": "3,432"
     },
     {
-      "title": "[Oshi no Ko]",
-      "Genre": "Reincartaion, Psychological, Supernatural",
-      "image": "assets/images/Oshi-no-ko-anime.jpg",
-      "Price": "3,723"
+      "title": "The Rising of the Shield Hero",
+      "genre": "Reincartaion, Psychological, Supernatural",
+      "image": "assets/images/The Rising of the Shield Hero-anime.jpg",
+      "price": "3,723"
     }
   ] 
 }
