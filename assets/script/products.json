@@ -1,0 +1,35 @@
+{
+    "products": [
+      {
+        "name": "anime1",
+        "tag": "Tensei Shitara Slime",
+        "genre": "action, isekai, fantasy",
+        "price": 1000,
+        "inCart": 0
+      },
+      {
+        "name": "anime2",
+        "tag": "Overlord",
+        "genre": "action, isekai, fantasy",
+        "price": 2000,
+        "inCart": 0
+      }
+    ],
+    "products2": [
+      {
+        "name": "merch1",
+        "tag": "Campfire Cooking in Another World with My Absurd Skill",
+        "genre": "action, isekai, fantasy",
+        "price": 2000,
+        "inCart": 0
+      },
+      {
+        "name": "merch2",
+        "tag": "Handyman Saitou in Another World",
+        "genre": "action, isekai, fantasy",
+        "price": 2000,
+        "inCart": 0
+      }
+    ]
+  }
+  

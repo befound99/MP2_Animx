@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap');
+
 /* Default margin and Padding  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Roboto', sans-serif;
+
   }
   
+
   /* utility classes */
+
   .d-flex {
     display: flex;
   }
@@ -23,14 +28,15 @@
     position: relative;
   }
   
+  
   /* Colors */
+  
   :root {
     --color60: whitesmoke;
     --color30: #d6d6d6;
-    --colors10: #D16923;
+    --colors10: #d16923;
   }
   
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap');
 
 /* navbar */
 nav {
@@ -89,7 +95,6 @@ nav {
     border-radius: 5px;
     text-shadow: 0 0 10px black;
     transition: all 250ms ease;
-    font-family: 'Roboto', sans-serif;
   }
   .nav-items span:hover{
     background-color: #D16923;
@@ -164,6 +169,12 @@ nav {
   display: flex;
   align-items: center;
 }
+.quantity .fa-minus {
+  border: 1px solid #d6d6d6;
+}
+.quantity .fa-plus {
+  border: 1px solid #d6d6d6;
+}
 .total {
   width: 10%;
   border-bottom: 1px solid #d6d6d6;
@@ -197,11 +208,6 @@ nav {
 }
 /* Delivery Address */
 
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-}
-
 .userAdd {
     display: flex;
     justify-content: space-between;
@@ -213,39 +219,42 @@ h3 {
 }
 
 .userAdd p {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
-/* Payment Method */
+/* Payment Method */ 
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
 
 .useCou {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    background-color: #d6d6d6;
-    border-bottom: 1px solid whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: #d6d6d6;
+  border-bottom: 1px solid whitesmoke;
+  padding: 0 50px 0 50px;
 }
 
-.useCou h3 {
-    margin-left: 50px;
+#coupon-input {
+  margin-left: 33%;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
 }
 
-#coupon {
-    width: 160px;
-    height: 50px;
-    margin-right: 50px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;    
-    color: whitesmoke;
-    appearance: none;
-    outline: none;
-    padding: 5px;
-    background-color: #d16923;
-    border: none;
-    border-radius: 10px;
+#apply-coupon-btn {
+  width: 160px;
+  height: 50px;
+  color: whitesmoke;
+  background-color: #d16923;
+  border-color: #d16923;
+  border-radius: 20px;
+  font-weight: 300;
 }
 
 .usePay {
@@ -266,7 +275,6 @@ h3 {
     height: 50px;
     margin-right: 50px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;       
     color: whitesmoke;
     appearance: none;
@@ -280,50 +288,40 @@ h3 {
 /* Delivery Note */
 
 .delivery-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  margin-left: 10px;
 }
-
-.note {
-    width: 300px;
-    height: 200px;
-    padding: 10px;
-    background-color: #d6d6d6;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+.delivery-message {
+  margin-left: 50px;
 }
 
 .note textarea {
-    width: 100%;
-    background-color: #d6d6d6;
-    border: none;
-    outline: none;
-    resize: none;
-    overflow: auto;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
+  background-color: #d6d6d6;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 10px;
     
 }
 
-.checkOut {
-    margin: 50px;
-    display: flex;
-    align-items: end;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+.checkout-container {
+  display: flex;
+  justify-content: end;
+  margin-right: 50px;
+  width: 100%;
 }
 
 #cheBut {
-    width: 160px;
-    height: 50px;
-    color: whitesmoke;
-    background-color: #d16923;
-    border-color: #d16923;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;   
+  width: 160px;
+  height: 50px;
+  color: whitesmoke;
+  background-color: #d16923;
+  border-color: #d16923;
+  border-radius: 20px;
+  font-weight: 300;   
 }
 
 footer {

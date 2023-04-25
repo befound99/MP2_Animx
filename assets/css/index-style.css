@@ -464,6 +464,7 @@ section {
   padding-block: 1rem;
   padding-inline: clamp(0.1px,2vw,1rem);
 }
+
 @media (width <= 1000px){
   .section-container-right {
     height: 50vh;
@@ -480,6 +481,11 @@ section {
   background-color: #d6d6d6;
   border-radius: 5px;
   
+}
+
+/* Merch section */
+.merch-card-1 {
+background-image: url(/assets/images/OPM.jpg);
 }
 
 /* footer */
