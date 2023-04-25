@@ -1,0 +1,28 @@
+{
+  "animes": [
+    {
+      "title": "[Oshi no Ko]",
+      "Genre": "Reincartaion, Psychological, Supernatural",
+      "image": "assets/images/Oshi-no-ko-anime.jpg",
+      "Price": "3,723"
+    },
+    {
+      "title": "[Oshi no Ko]",
+      "Genre": "Reincartaion, Psychological, Supernatural",
+      "image": "assets/images/Oshi-no-ko-anime.jpg",
+      "Price": "3,723"
+    },
+    {
+      "title": "[Oshi no Ko]",
+      "Genre": "Reincartaion, Psychological, Supernatural",
+      "image": "assets/images/Oshi-no-ko-anime.jpg",
+      "Price": "3,723"
+    },
+    {
+      "title": "[Oshi no Ko]",
+      "Genre": "Reincartaion, Psychological, Supernatural",
+      "image": "assets/images/Oshi-no-ko-anime.jpg",
+      "Price": "3,723"
+    }
+  ] 
+}

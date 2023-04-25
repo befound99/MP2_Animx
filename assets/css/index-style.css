@@ -47,6 +47,7 @@
   background-attachment: fixed;
   background-position: center;
   min-width: 320px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* navbar */
@@ -54,7 +55,7 @@ nav {
   width: clamp(320px, 95%, 1440px);
   margin-inline: auto;
   background-color: rgba(214, 214, 214, 0.40);
-  backdrop-filter: blur(6px);
+  backdrop-filter: invert(80%) blur(2px);
   border-radius: 5px;
   justify-content: space-between;
   padding-block: 5px;
@@ -300,26 +301,12 @@ section {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 }
 /* Card and Card Details */
-.card-group-manga {
-  margin: 1rem;
-  width: clamp(200px, 10vw, 10vw);
-}
 .card-group-anime {
   margin: 1rem;
   width: clamp(300px, 15vw, 15vw);
 }
 /* card cover */
-.card-manga {
-  background-color: lightsalmon;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  justify-content: end;
-  transition: all 250ms;
-}
-.card-manga:hover {
-  transform: scale(1.2);
-}
+
 .card-anime {
   background-color: lightsalmon;
   aspect-ratio: 16/9;
@@ -330,109 +317,7 @@ section {
   overflow: hidden;
 }
 .card-anime:hover {
-  transform: scale(1.2);
-}
-.manga-card-1 {
-  background-image: url(/assets/images/Tensei\ Shitara\ Slime.jpg);
-}
-.manga-card-2 {
-  background-image: url(/assets/images/Overlord.jpg);
-}
-.manga-card-3 {
-  background-image: url(/assets/images/Campfire\ Cooking\ in\ Another\ World\ with\ My\ Absurd\ Skill.jpg);
-}
-.manga-card-4 {
-  background-image: url(/assets/images/Handyman\ Saitou\ in\ Another\ World.jpg);
-}
-.manga-card-5 {
-  background-image: url(/assets/images/Giant-Killing-Manga.jpg);
-}
-.manga-card-6 {
-  background-image: url(/assets/images/chainsaw-man-manga.jpg);
-}
-.manga-card-7 {
-  background-image: url(/assets/images/Mieruko-chan-manga.jpg);
-}
-.manga-card-8 {
-  background-image: url(/assets/images/Berserk-manga.jpg);
-}
-.manga-card-9 {
-  background-image: url(/assets/images/spyfamilyn-manga.jpg);
-}
-.manga-card-10 {
-  background-image: url(/assets/images/Horimiya-manga.jpg);
-}
-
-/* quick view */
-.quick-view-container {
-  justify-content: center;
-  height: 50%;
-
-}
-.quick-view-btn {
-  width: 145px;
-  height: fit-content;
-  border: 0;
-  background-color: #D16923;
-  color: whitesmoke;
-  justify-content: space-evenly;
-  padding: 5px 10px ;
-  border-radius: 5px;
-  align-items: center;
-  transition: transform 250ms;
-}
-.quick-view-btn:hover {
-  transform:scale(1.1);
-  z-index: 2;
-}
-
-.action-div {
-  justify-content: end;
-  align-items: center;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.80));
-
-}
-/* Actions button */
-.actions-container button {
-  flex-grow: 1;
-  border: 0;
-  color: whitesmoke;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  border-radius: 5px;
-}
-.add-to-cart-btn {
-  background-color: #D16923;
-  transition: all 250ms;
-  /* opacity: 0; */
-}
-.add-to-cart-btn:hover {
-  /* opacity: 1; */
   transform: scale(1.1);
-  z-index: 2;
-}
-.add-to-wishlist-btn {
-  background-color: rgb(255, 49, 90);
-}
-.buy-now-btn {
-  background-color: rgb(88, 223, 88);
-}
-.card-name {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-}
-.card-tags {
-  list-style-type: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  flex-wrap: wrap;
-}
-.genre{
-  font-weight: 600;
-}
-.card-price {
-  color: rgb(0, 105, 0);
 }
 @media (width <= 1000px) {
   .section-container {
@@ -458,16 +343,132 @@ section {
   padding: 1rem;
   align-items: center;
 }
+.manga-section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.anime-section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .section-body {
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 @media (width <= 502px){
   .section-body {
     justify-content: center;
   }
 } 
+
+/* manga cards */
+.card-group-manga {
+  margin: 0 1rem 1rem 1rem;
+}
+.card-manga {
+  position: relative;
+  width: clamp(180px, 10vw, 10vw);
+  height: clamp(270px, 15vw, 15vw);
+  display: flex;
+  flex-direction: column;
+  transition: all 250ms;
+}
+.card-manga:hover {
+  transform: scale(1.1);
+}
+.card-manga > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.action-div {
+  background: linear-gradient(rgba(0, 0, 0,0.2),rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8));
+  flex-grow: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 0;
+  transition: all 250ms;
+}
+.action-div:hover {
+  opacity: 1;
+}
+.quickview-container {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.quickview-btn {
+  height: fit-content;
+  padding: 5px 10px;
+  background-color: #D16923;
+  color: whitesmoke;
+  border: 0;
+  border-radius: 5px;
+  transition: all 250ms;
+  cursor: pointer;
+  font-size: clamp(12px, 1vw, 1vw);
+  display: flex;
+  align-items: center;
+}
+.fa-regular.fa-eye{
+  margin-left: 5px;
+}
+.quickview-btn:hover {
+  transform: scale(1.1);
+}
+.actions-container {
+  display: flex;
+
+}
+.actions-container > button {
+  padding-block: 5px;
+  font-size: clamp(12px, 1vw, 1vw);
+  flex-grow: 1;
+  margin: 1vmin;
+  border: 0;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.actions-container > button:nth-child(1) {
+  background-color: #D16923;
+  transition: all 250ms;
+}
+.actions-container > button:nth-child(1):hover {
+  transform: scale(1.1);
+}
+.actions-container > button:nth-child(2) {
+  background-color: #bd1f3e;
+}
+.actions-container > button:nth-child(3) {
+  background-color: #4e8f0c;
+}
+/* manga details */
+.manga-details {
+  width: 10vw;
+}
+.manga-title {
+  font-weight: 800;
+  color: #D16923;
+  font-size: clamp(20px, 1vw, 1vw);
+}
+.manga-price {
+  color: #4e8f0c;
+}
+.manga-genre {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: clamp(14px, 0.8vw, 0.8vw);
+}
 /* Anime section */
 .anime-card-1 {
   background-image: url(/assets/images/The\ Angel\ Next\ Door.jpg);
@@ -530,6 +531,11 @@ footer {
   background-color: #d6d6d6;
   flex-grow: 1;
   border-radius: 5px;
+}
+@media (width <= 490px) {
+  .footer-contacts-container {
+    flex-direction: column;
+  }
 }
 .footer-contacts-left, .footer-contacts-right {
   flex-grow: 1;

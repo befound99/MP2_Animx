@@ -1,0 +1,34 @@
+{
+  "mangas" : [
+    {
+      "title": "Tensei Shitara Slime",
+      "genre": "Isekai, Fantasy, Monsters",
+      "image": "assets/images/Tensei Shitara Slime.jpg",
+      "price": "714"
+    },
+    {
+      "title": "Overlord",
+      "genre": "Game, Fantasy, Monsters",
+      "image": "assets/images/Overlord.jpg",
+      "price": "656"
+    },
+    {
+      "title": "Dr. Stone",
+      "genre": "Survival, Post-apocalyptic, Adventure",
+      "image": "assets/images/dr-stone-7194f44a287d.jpg",
+      "price": "659"
+    },
+    {
+      "title": "Berserk",
+      "genre": "Adventure, Action, Demons",
+      "image": "assets/images/Berserk-manga.jpg",
+      "price": "854"
+    },
+    {
+      "title": "Horimiya",
+      "genre": "Isekai, Fantasy, Monsters",
+      "image": "assets/images/Horimiya-manga.jpg",
+      "price": "780"
+    }
+  ]
+}
