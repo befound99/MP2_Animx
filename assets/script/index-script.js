@@ -118,73 +118,36 @@ fetchAnime();
 const carts = document.querySelectorAll('.add-to-cart-btn');
 const carts2 = document.querySelectorAll('.add-to-cart-btn2');
 
-const products = [
-{
-name: "anime1",
-tag: "Tensei Shitara Slime",
-genre: "action, isekai, fantasy",
-price: 1000,
-inCart: 0
-},
-{
-name: "anime2",
-tag: "Overlord",
-genre: "action, isekai, fantasy",
-price: 2000,
-inCart: 0
-},
-{
-  name: "anime1",
-  tag: "Tensei Shitara Slime",
-  genre: "action, isekai, fantasy",
-  price: 1000,
-  inCart: 0
-  }
-];
+async function fetchProducts(){
+  const res = await fetch("assets/script/products.json");
+  const data = await res.json();
+  const products = data.products;
+  const products2 = data.products2;
+  console.log(products);
 
-const products2 = [
-{
-name: "merch1",
-tag: "Campfire Cooking in Another World with My Absurd Skill",
-genre: "action, isekai, fantasy",
-price: 2000,
-inCart: 0
-},
-{
-name: "merch2",
-tag: "Handyman Saitou in Another World",
-genre: "action, isekai, fantasy",
-price: 2000,
-inCart: 0
-}
+    carts.forEach((cart, i) => {
+      cart.addEventListener('click', () => {
+        cartNumbers(products[i]);
+        subCost(products[i]);
+      });
+    });
+    
+    carts2.forEach((cart, i) => {
+      cart.addEventListener('click', () => {
+        cartNumbers(products2[i]);
+        subCost(products2[i]);
+      });
+    });
+  };
 
-];
+  
 
-// Loop through each cart button and add an event listener to them
-carts.forEach((cart, i) => {
-cart.addEventListener('click', () => {
-// Call cartNumbers() and subCost() functions with the corresponding product as an argument
-cartNumbers(products[i]);
-subCost(products[i]);
-});
-});
-// Loop through each cart button and add an event listener to them
-carts2.forEach((cart, i) => {
-  cart.addEventListener('click', () => {
-  // Call cartNumbers() and subCost() functions with the corresponding product as an argument
-  cartNumbers(products2[i]);
-  subCost(products2[i]);
-  });
-  });
+  fetchProducts();
 
-// Select the cart span element
 const cart = document.querySelector('.cart span');
 
-// Function to update the cart span with the number of items in the cart
 function onLoadCartNumbers() {
-  // Retrieve the cartNumbers from localStorage or set it to zero if it doesn't exist
   const productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
-  // Only set the text content of the cart span if the productNumbers is greater than zero
   if (productNumbers > 0) {
     cart.textContent = productNumbers;
   } else {
@@ -192,78 +155,56 @@ function onLoadCartNumbers() {
   }
 }
 
-// Function to update the cartNumbers in localStorage and the cart span
 function cartNumbers(product) {
 let productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
-// Increment the productNumbers by 1 and update the value in localStorage
 localStorage.setItem('cartNumbers', productNumbers + 1);
-// Set the text content of the cart span to the updated productNumbers
 cart.textContent = productNumbers + 1;
-// Call the setItems() function with the product as an argument
 setItems(product);
 }
 
-// Set items in local storage cart
 function setItems(product) {
-// Get cart items from local storage
 let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
 
-// If the product is not already in the cart, add it
 if (!cartItems[product.tag]) {
     cartItems[product.tag] = {...product, inCart: 0};
 }
 
-// Increment the quantity of the product in the cart
 cartItems[product.tag].inCart += 1;
 
-// Update cart items in local storage
 localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
-// Calculate and update the subtotal cost of the cart
 function subCost(product) {
-// Get the subtotal cost from local storage
 let cartCost = parseInt(localStorage.getItem('subCost')) || 0;
 
-// Add the price of the product to the subtotal cost
     localStorage.setItem("subCost", cartCost + product.price);
 }
 
 
-// This function removes an item from the cart and updates the cart display
 
 function removeItem(tag) {
-    // Retrieve cart items and cost from local storage
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
     let cartCost = parseInt(localStorage.getItem('subCost'));
   
-    // If cart items exist and the item to be removed exists
     if (cartItems && cartItems[tag]) {
-      // Retrieve the removed item and cart numbers
       let removedItem = cartItems[tag];
       let cartNumbers = parseInt(localStorage.getItem('cartNumbers'));
   
-      // Update cart numbers
       localStorage.setItem('cartNumbers', cartNumbers - removedItem.inCart);
       document.querySelector('.cart span').textContent = cartNumbers - removedItem.inCart;
   
-      // Update cart cost
       localStorage.setItem('subCost', cartCost - (removedItem.price * removedItem.inCart));
   
-      // Remove the item from the cart
       delete cartItems[tag];
       localStorage.setItem('productsInCart', JSON.stringify(cartItems));
   
-      // Update the cart display
       displayCart();
       
-      // Update the cart span
       onLoadCartNumbers();
     }
   }
   
 
-// This function decreases the quantity of an item in the cart, or removes it if quantity becomes 0, and updates the cart display
 function decreaseQuantity(tag) {
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
     let cartNumbers = parseInt(localStorage.getItem('cartNumbers'));
@@ -279,29 +220,14 @@ function decreaseQuantity(tag) {
         displayCart();
         onLoadCartNumbers(); 
       } else {
-        // If quantity becomes 0, remove the item from the cart and update cart numbers and cart span
         removeItem(tag);
         onLoadCartNumbers(); 
       }
     }
 }
 
-// Function to update the cart span with the number of items in the cart
-function onLoadCartNumbers() {
-  // Retrieve the cartNumbers from localStorage or set it to zero if it doesn't exist
-  const productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
-  // Only set the text content of the cart span if the productNumbers is greater than zero
-  if (productNumbers > 0) {
-    cart.textContent = productNumbers;
-  } else {
-    cart.textContent = "";
-    localStorage.removeItem("productsInCart");
-    localStorage.removeItem("subCost");
-  }
-}
 
   
-// This function increases the quantity of an item in the cart and updates the cart display
 const increaseQuantity = (tag) => {
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
     let cartNumbers = parseInt(localStorage.getItem('cartNumbers'));
@@ -318,51 +244,98 @@ const increaseQuantity = (tag) => {
     }
   };
 
+  function applyCoupon() {
+    const couponInput = document.getElementById('coupon-input');
+    const couponCode = couponInput.value;
   
+    const appliedCouponCodes = JSON.parse(localStorage.getItem('appliedCouponCodes')) || [];
+    if (appliedCouponCodes.includes(couponCode)) {
+      alert('This coupon code has already been applied.');
+      return;
+    }
+  
+    if (couponCode === 'DISCOUNT10') {
+      let cartCost = parseInt(localStorage.getItem('subCost'));
+      cartCost *= 0.9; 
+      localStorage.setItem('subCost', cartCost);
+  
+      displayCart();
+  
+      couponInput.value = '';
+  
+      alert('Coupon applied!');
+  
+    } else if (couponCode === 'FREESHIPPING') {
+      let cartItems = JSON.parse(localStorage.getItem('cart'));
+      for (let item of cartItems) {
+        item.shipping_cost = 0;
+      }
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+  
+      displayCart();
+  
+      couponInput.value = '';
+  
+      alert('Coupon applied!');
+  
+    } else {
+      alert('Invalid coupon code!');
+    }
+  
+    appliedCouponCodes.push(couponCode);
+    localStorage.setItem('appliedCouponCodes', JSON.stringify(appliedCouponCodes));
+  }
+  
+  const applyCouponBtn = document.getElementById('apply-coupon-btn');
+if (applyCouponBtn) {
+  applyCouponBtn.addEventListener('click', applyCoupon);
+} else {
+  console.error('Could not find apply-coupon-btn element');
+}
+
   
   const displayCart = () => {
-    // Retrieve cart items, product container and cart cost from local storage
     let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
     let productContainer = document.querySelector(".products");
     let cartCost = localStorage.getItem('subCost');
   
+    console.log(cartItems);
   
-    // If cart items exist and product container is found on the page
     if (cartItems && productContainer) {
-      // Clear previous product items from product container
-      productContainer.innerHTML = '';
-      
-      // Loop through each item in the cart and add it to the product container
-      Object.values(cartItems).map(item => {
-        productContainer.innerHTML += `
-          <div class="product"> 
-            <i class="fa-solid fa-circle-xmark" onclick="removeItem('${item.tag}')"></i> 
-            <img src="assets/images/${item.tag}.jpg"> <span>${item.name}</span> 
-          </div> 
-          <div class="price">${item.price}</div> 
-          <div class="quantity"> 
-            <i class="fa-solid fa-minus" onclick="decreaseQuantity('${item.tag}')"></i> 
-            <span>${item.inCart}</span> 
-            <i class="fa-solid fa-plus" onclick="increaseQuantity('${item.tag}')"></i> 
-          </div> 
-          <div class="total"> ₱${item.inCart * item.price}.00 </div>`;
-      });
+      productContainer.innerHTML = "";
   
-      // Add total cost to the product container
-      productContainer.innerHTML += `
-        <div class="cartTotalBox">
-          <h4 class="cartTotalTitle">Total</h4>
-          <h4 class="cartTotal">₱${cartCost}.00</h4>
-        </div>`;
+      if (Object.keys(cartItems).length === 0) { 
+        productContainer.innerHTML = "<p>Your cart is empty</p>";
+      } else {
+        Object.values(cartItems).map((item) => {
+          productContainer.innerHTML += `
+            <div class="product">
+              <i class="fa-solid fa-circle-xmark" onclick="removeItem('${item.tag}')"></i>
+              <img src="assets/images/${item.tag}.jpg"> <span>${item.name}</span>
+            </div>
+            <div class="price">${item.price}</div>
+            <div class="quantity">
+              <i class="fa-solid fa-minus" onclick="decreaseQuantity('${item.tag}')"></i>
+              <span>${item.inCart}</span>
+              <i class="fa-solid fa-plus" onclick="increaseQuantity('${item.tag}')"></i>
+            </div>
+            <div class="total"> ₱${item.inCart * item.price}.00 </div>`;
+        });
+  
+        productContainer.innerHTML += `
+          <div class="cartTotalBox">
+            <h4 class="cartTotalTitle">Sub Total</h4>
+            <h4 class="cartTotal">₱${cartCost}.00</h4>
+          </div>
+        `;
+      }
     }
   };
   
-  // Call functions to initialize the cart when the page loads
   onLoadCartNumbers();
   displayCart();
-  
 
-// FAQ Modal
+  // FAQ Modal
 // Get the FAQ modal element and button that opens the modal
 let faqModal = document.getElementById("faqModal");
 let faqBtn = document.getElementById("faqBtn");
@@ -434,3 +407,7 @@ loginModal.style.display = "none";
 };
 
 const total = document.querySelectorAll('.total');
+console.log(total);
+
+  
+

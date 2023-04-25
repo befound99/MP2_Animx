@@ -12,17 +12,16 @@
   <title>ANIMX Check Out Page</title>
 </head>
 <body>
+
   <div class="page-container">
-    <!-- Nav -->
     <nav class="d-flex">
-      <!-- Brand -->
       <div class="brand-container d-flex">
         <a href="index.html" class="brand "><span>ANIMX</span></a>
       </div>
 
       <!-- nav items -->
       <ul class="nav-items-container d-flex">
-        <li class="nav-items"><a href="#" class="nav-items1"><span>Manga</span></a></li>
+        <li class="nav-items"><a href="index.html" class="nav-items1"><span>Manga</span></a></li>
         <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
         <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
         <li class="nav-items"><a href="#" class="nav-items4"><span>FAQ</span></a></li>
@@ -39,11 +38,12 @@
   <!-- Products Section -->
   
   <div class="products-container">
+
     <div class="products-header">
-      <h5 class="product-title">Product</h5>
-      <h5 class="price">Price</h5>
-      <h5 class="quantity">Quantity</h5>
-      <h5 class="total">Total</h5>
+      <h2 class="product-title">Product</h2>
+      <h2 class="price">Price</h2>
+      <h2 class="quantity">Quantity</h2>
+      <h2 class="total">Total</h2>
     </div>
 
     <div class="products">
@@ -51,52 +51,44 @@
     </div>
 
   </div>
-    
- 
-  
 
-  <br>
-
-<!-- Product Section -->
-
-  
-  
-
-  <br>
-
-  <!-- Delivery Address -->
+  <!-- Payment Section -->
 
   <form action="#" method="#">
-    <div class="userAdd">
-        <h3>Delivery Address:</h3>
-        <p>Chuo St. Akihabara, Tokyo, Japan</p>
-    </div>
-
-    <!-- <br> -->
-
-    <!-- Payment Method -->
 
     <div class="payment-container">
+
+      <!-- Delivery Address -->
+
+      <div class="userAdd">
+
+        <h3>Delivery Address:</h3>
+        <p>Chuo St. Akihabara, Tokyo, Japan</p>
+
+      </div>
+
+      <br>
 
       <!-- Coupon -->
 
       <div class="useCou">
-        <h3>Select Coupon</h3>
-        <select name="#" id="coupon">
-          <option value="#">Coupon</option>
-          <option value="#">5% Discount</option>
-          <option value="#">- ₱ 100.00</option>
-        </select>
+
+        <h3>ANIMX Code:</h3>
+        <input type="text" id="coupon-input" placeholder="Enter coupon code">
+        <button id="apply-coupon-btn">Apply Coupon</button>
+
       </div>
 
-      <!-- <br> -->
+      <br>
 
       <div class="usePay">
-        <h3>Payment Option</h3>
+
+        <h3>Payment Option:</h3>
         <select name="#" id="payment">
           <option value="#">COD</option>
           <option value="#">G-Cash</option>
         </select>
+
       </div>
 
     </div>
@@ -107,22 +99,23 @@
 
     <div class="delivery-container">
 
-    <div class="note">
-      <p><label for="note">Delivery Note:</label></p>
-      <textarea name="userNote" id="userNote" rows="3"></textarea>
-    </div>
+      <div class="delivery-message">
 
-    <!-- Check Out -->
+        <h3>Message:</h3>
 
-      <div class="checkOut">
+      </div>
+
+      <div class="note">
+
+        <textarea name="userNote" id="userNote" rows="3"></textarea>
+
+      </div>
+
+      <!-- Check Out -->
       
-        <div>
-          <h2 class="total">Total ₱</h2>
-        </div>
+      <div class="checkout-container">
 
-        <div>
-          <input class="cheBut" id="cheBut" type="button" value="Check Out">
-        </div>
+        <input class="cheBut" id="cheBut" type="button" value="Check Out">
 
       </div>
 
