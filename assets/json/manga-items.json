@@ -3,25 +3,25 @@
     {
       "title": "Campfire Cooking in Another World",
       "genre": "Cooking, Isekai, Fantasy",
-      "image": "/assets/images/Campfire Cooking in Another World with My Absurd Skill.jpg",
+      "image": "assets/images/Campfire Cooking in Another World with My Absurd Skill.jpg",
       "price": "675"
     },
     {
       "title": "Dr Stone",
       "genre": "Survival, Science, Adventure",
-      "image": "/assets/images/dr-stone-7194f44a287d.jpg",
+      "image": "assets/images/dr-stone-7194f44a287d.jpg",
       "price": "700"
     },
     {
       "title": "Overlord",
       "genre": "Game, Fantasy, Adventure, Action",
-      "image": "/assets/images/Overlord.jpg",
+      "image": "assets/images/Overlord.jpg",
       "price": "720"
     },
     {
       "title": "One Punch-Man",
       "genre": "Action, Superhero, Slice of Life",
-      "image": "/assets/images/OPM.jpg",
+      "image": "assets/images/OPM.jpg",
       "price": "690"
     }
   ]
