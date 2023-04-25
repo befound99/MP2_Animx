@@ -434,6 +434,3 @@ loginModal.style.display = "none";
 };
 
 const total = document.querySelectorAll('.total');
-
-  
-
