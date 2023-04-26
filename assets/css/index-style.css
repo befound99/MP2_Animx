@@ -684,7 +684,7 @@ footer {
 /* Login Modal */
 /* The Modal (background) */
 .modalLogin {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed; /* Stay in place */
   z-index: 3; /* Sit on top */
   left: 0;
@@ -696,20 +696,127 @@ footer {
 }
 
 /* Modal Content/Box */
-.modal-content-login {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.login-modal-header {
+  background-color: #D16923;
+  padding: 1rem;
+  position: relative;
+  color: white;
 }
-
+.login-modal-header h2 {
+  font-size: clamp(16px,2vw,2vw);
+}
 /* Close Button */
 .closeLogin {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 12px;
   font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  height: fit-content;
+  background-color: transparent;
+}
+.modal-content-login {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  width: 50vmin; /* Could be more or less, depending on screen size */
+  justify-content: space-between;
+}
+
+.modal-content-login form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background-color: whitesmoke;
+}
+.modal-content-login form {
+  font-size: clamp(16px,2vw,2vw);
+}
+.modal-content-login form > * {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-content-login form input{
+  height: 1.5rem;
+}
+.loginSubmit {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.dontHaveAcc {
+  color: grey;
+  font-size: 1.5vmin;
+  width: fit-content;
+  align-self: flex-end;
+}
+/* OR */
+.orHr {
+  border-top: 2px solid rgba(128, 128, 128, 0.521);
+}
+.orDiv{
+  height: 1rem;
+  background-color: whitesmoke;
+}
+.orDiv span{
+  transform: translate(-50%, -60%);
+  left: 50%;
+  top: 0;
+  background-color: whitesmoke;
+  padding-inline: 10px;
+  font-size: 13px;
+  color: #888;
+}
+.loginWSocials {
+  align-items: center;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+.loginWSocials > button{
+  padding-block: 10px;
+  width: 80%;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginWSocials > button:nth-child(1) i{
+  color: #161B22;
+  font-size: 1.25rem;
+  margin-right: 3%;
+}
+.loginWSocials > button:nth-child(1) span {
+  font-weight: 700;
+}
+.loginWSocials > button:nth-child(2) i{
+  background-image: 
+    linear-gradient(135deg, #4285F4 ,#EA4335,#FBBC04,#33A050);
+    -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 3%;
+}
+.loginWSocials > button:nth-child(2) span{
+  font-weight: 700;
+}
+.loginWSocials > button:nth-child(3) i{
+  background-image: 
+    linear-gradient(#395693 ,#3f5b97);
+    -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 3%;
+}
+.loginWSocials > button:nth-child(3) span{
+  font-weight: 700;
 }
 
 .closeLogin:hover,

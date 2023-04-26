@@ -1,12 +1,15 @@
 
-const carts = document.querySelectorAll('.add-to-cart-btn');
-const carts2 = document.querySelectorAll('.add-to-cart-btn2');
 
-async function fetchProducts(){
+
+ async function fetchProducts(){
   const res = await fetch("assets/script/products.json");
   const data = await res.json();
   const products = data.products;
   const products2 = data.products2;
+
+  const carts = document.querySelectorAll('.add-to-cart-btn');
+  const carts2 = document.querySelectorAll('.add-to-cart-btn2');
+
   console.log(products);
 
     carts.forEach((cart, i) => {
@@ -24,13 +27,10 @@ async function fetchProducts(){
     });
   };
 
-  
+ 
 
-  fetchProducts();
-
-const cart = document.querySelector('.cart span');
-
-function onLoadCartNumbers() {
+ function onLoadCartNumbers() {
+  const cart = document.querySelector('.cart span');
   const productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
   if (productNumbers > 0) {
     cart.textContent = productNumbers;
@@ -128,54 +128,55 @@ const increaseQuantity = (tag) => {
     }
   };
 
-  function applyCoupon() {
-    const couponInput = document.getElementById('coupon-input');
-    const couponCode = couponInput.value;
+// function applyCoupon() {
+//   const couponInput = document.getElementById('coupon-input');
+//   const couponCode = couponInput.value;
+
+//   const appliedCouponCodes = JSON.parse(localStorage.getItem('appliedCouponCodes')) || [];
+//   if (appliedCouponCodes.includes(couponCode)) {
+//     alert('This coupon code has already been applied.');
+//     return;
+//   }
+
+//   if (couponCode === 'DISCOUNT10') {
+//     let cartCost = parseInt(localStorage.getItem('subCost'));
+//     cartCost *= 0.9; 
+//     localStorage.setItem('subCost', cartCost);
+
+//     displayCart();
+
+//     couponInput.value = '';
+
+//     alert('Coupon applied!');
+
+//   } else if (couponCode === 'FREESHIPPING') {
+//     let cartItems = JSON.parse(localStorage.getItem('cart'));
+//     for (let item of cartItems) {
+//       item.shipping_cost = 0;
+//     }
+//     localStorage.setItem('cart', JSON.stringify(cartItems));
+
+//     displayCart();
+
+//     couponInput.value = '';
+
+//     alert('Coupon applied!');
+
+//   } else {
+//     alert('Invalid coupon code!');
+//   }
+
+//     appliedCouponCodes.push(couponCode);
+//     localStorage.setItem('appliedCouponCodes', JSON.stringify(appliedCouponCodes));
+//     const applyCouponBtn = document.getElementById('apply-coupon-btn');
+//     if (applyCouponBtn) {
+//       applyCouponBtn.addEventListener('click', applyCoupon);
+//     } else {
+//       console.error('Could not find apply-coupon-btn element');
+//     }
+//   }
   
-    const appliedCouponCodes = JSON.parse(localStorage.getItem('appliedCouponCodes')) || [];
-    if (appliedCouponCodes.includes(couponCode)) {
-      alert('This coupon code has already been applied.');
-      return;
-    }
-  
-    if (couponCode === 'DISCOUNT10') {
-      let cartCost = parseInt(localStorage.getItem('subCost'));
-      cartCost *= 0.9; 
-      localStorage.setItem('subCost', cartCost);
-  
-      displayCart();
-  
-      couponInput.value = '';
-  
-      alert('Coupon applied!');
-  
-    } else if (couponCode === 'FREESHIPPING') {
-      let cartItems = JSON.parse(localStorage.getItem('cart'));
-      for (let item of cartItems) {
-        item.shipping_cost = 0;
-      }
-      localStorage.setItem('cart', JSON.stringify(cartItems));
-  
-      displayCart();
-  
-      couponInput.value = '';
-  
-      alert('Coupon applied!');
-  
-    } else {
-      alert('Invalid coupon code!');
-    }
-  
-    appliedCouponCodes.push(couponCode);
-    localStorage.setItem('appliedCouponCodes', JSON.stringify(appliedCouponCodes));
-  }
-  
-  const applyCouponBtn = document.getElementById('apply-coupon-btn');
-if (applyCouponBtn) {
-  applyCouponBtn.addEventListener('click', applyCoupon);
-} else {
-  console.error('Could not find apply-coupon-btn element');
-}
+
 
   
   const displayCart = () => {
@@ -213,86 +214,76 @@ if (applyCouponBtn) {
       }
     }
   };
-  
-  onLoadCartNumbers();
-  displayCart();
 
-  // FAQ Modal
-// Get the FAQ modal element and button that opens the modal
-let faqModal = document.getElementById("faqModal");
-let faqBtn = document.getElementById("faqBtn");
+// // FAQ Modal
+// // Get the FAQ modal element and button that opens the modal
+// let faqModal = document.getElementById("faqModal");
+// let faqBtn = document.getElementById("faqBtn");
 
-// Get the <span> element that closes the FAQ modal
-let faqSpan = document.getElementsByClassName("closeFaq")[0];
+// // Get the <span> element that closes the FAQ modal
+// let faqSpan = document.getElementsByClassName("closeFaq")[0];
 
-// When the user clicks the FAQ button, toggle the FAQ modal display
-faqBtn.onclick = function() {
-// Close the login modal if it is open
-if (loginModal.style.display === "block") {
-loginModal.style.display = "none";
-}
+// // When the user clicks the FAQ button, toggle the FAQ modal display
+// faqBtn.onclick = function() {
+// // Close the login modal if it is open
+// if (loginModal.style.display === "block") {
+// loginModal.style.display = "none";
+// }
 
-// Toggle the visibility of the FAQ modal
-if (faqModal.style.display === "block") {
-faqModal.style.display = "none";
-} else {
-faqModal.style.display = "block";
-}
-};
+// // Toggle the visibility of the FAQ modal
+// if (faqModal.style.display === "block") {
+// faqModal.style.display = "none";
+// } else {
+// faqModal.style.display = "block";
+// }
+// };
 
-// When the user clicks on <span> (x), close the FAQ modal
-faqSpan.onclick = function() {
-faqModal.style.display = "none";
-};
+// // When the user clicks on <span> (x), close the FAQ modal
+// faqSpan.onclick = function() {
+// faqModal.style.display = "none";
+// };
 
-// Add click event listener to accordion headers
-let accordionHeaders = document.querySelectorAll('.accordion-header');
-accordionHeaders.forEach(function(header) {
-header.addEventListener('click', function() {
-// Toggle the visibility of the accordion content
-let content = this.nextElementSibling;
-content.classList.toggle('accordion-content-visible');
-});
-});
+// // Add click event listener to accordion headers
+// let accordionHeaders = document.querySelectorAll('.accordion-header');
+// accordionHeaders.forEach(function(header) {
+// header.addEventListener('click', function() {
+// // Toggle the visibility of the accordion content
+// let content = this.nextElementSibling;
+// content.classList.toggle('accordion-content-visible');
+// });
+// });
 
-// Login Modal
-// Get the login modal element and the button to open it
-let loginModal = document.getElementById("loginModal");
-let loginBtn = document.getElementById("userLoginBtn");
+// // Login Modal
+// // Get the login modal element and the button to open it
+// let loginModal = document.getElementById("loginModal");
+// let loginBtn = document.getElementById("userLoginBtn");
 
-// Get the <span> element that closes the login modal
-let loginSpan = document.getElementsByClassName("closeLogin")[0];
+// // Get the <span> element that closes the login modal
+// let loginSpan = document.getElementsByClassName("closeLogin")[0];
 
-// When the user clicks the login button, open the login modal
-loginBtn.onclick = function() {
-// Close the FAQ modal if it is open
-if (faqModal.style.display === "block") {
-faqModal.style.display = "none";
-}
+// // When the user clicks the login button, open the login modal
+// loginBtn.onclick = function() {
+// // Close the FAQ modal if it is open
+// if (faqModal.style.display === "block") {
+// faqModal.style.display = "none";
+// }
 
-// Open the login modal
-loginModal.style.display = "block";
-};
+// // Open the login modal
+// loginModal.style.display = "block";
+// };
 
-// When the user clicks on <span> (x), close the login modal
-loginSpan.onclick = function() {
-loginModal.style.display = "none";
-};
+// // When the user clicks on <span> (x), close the login modal
+// loginSpan.onclick = function() {
+// loginModal.style.display = "none";
+// };
 
-// Close both modals if the user clicks outside of them
-window.onclick = function(event) {
-if (event.target == faqModal) {
-faqModal.style.display = "none";
-} else if (event.target == loginModal) {
-loginModal.style.display = "none";
-}
-};
+// // Close both modals if the user clicks outside of them
+// window.onclick = function(event) {
+// if (event.target == faqModal) {
+// faqModal.style.display = "none";
+// } else if (event.target == loginModal) {
+// loginModal.style.display = "none";
+// }
+// };
 
-  
-const textarea = document.querySelector('#userNote');
-
-textarea.addEventListener('input', () => {
-  textarea.rows = 2;
-  textarea.rows = Math.ceil(textarea.scrollHeight / 20);
-});
-
+export {fetchProducts, onLoadCartNumbers, cartNumbers, setItems, subCost, removeItem, decreaseQuantity, increaseQuantity, displayCart};

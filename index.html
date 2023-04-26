@@ -12,8 +12,7 @@
   <title>Animx | Bringing Your Favorite Anime and Manga to Life</title>
 </head>
 <body>
-  <script src="assets/script/index-script.js" defer></script>
-  <script src="assets/script/check-out-script.js" defer></script>
+  <script type="module" src="./assets/script/index-script.js" defer></script>
   <div class="page-container">
     <!-- Nav -->
     <nav class="d-flex">
@@ -33,7 +32,7 @@
       <!-- Login/Cart -->
       <ul class="login-cart-container d-flex">
         <li class="cart relative"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="absolute cart-item-number">0</span></li>
-        <li><a href="#"><i class="fa-solid fa-circle-user" id="userLoginBtn"></i></a></li>
+        <li id="userLoginBtn"><a href="#"><i class="fa-solid fa-circle-user" ></i></a></li>
       </ul>
 
       <!-- Burger/Menu Button -->
@@ -81,7 +80,7 @@
           </section>
           <!-- Manga Section end-->
 
-          
+
 
           <!-- Anime Section -->
           <section class="section d-flex flex-col">
@@ -145,17 +144,42 @@
     <!-- Log in Modal -->
 
     <div id="loginModal" class="modalLogin">
-      <div class="modal-content-login">
-        <span class="closeLogin">&times;</span>
-        <h2>Log in</h2>
+      <div class="modal-content-login d-flex flex-col">
+        <div class="login-modal-header d-flex">
+          <h2>Log in</h2>
+          <button class="closeLogin"><i class="fa-solid fa-x"></i></button>
+        </div>
         <form>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
-          <button type="submit">Log in</button>
+          <div class="flex-col">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+          </div>
+          <div class="flex-col">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+          </div>
+          <div>
+            <a href="#" class="dontHaveAcc d-flex">
+              <span >Don't have an account? Sign up</span>
+            </a>
+            <button type="submit" class="loginSubmit">Log in</button>
+          </div>
         </form>
-        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <hr class="orHr">
+        <div class="orDiv relative">
+          <span class="absolute">or login with</span>
+        </div>
+        <div class="loginWSocials d-flex flex-col">
+          <button>
+            <i class="fa-brands fa-github"></i>
+          </button>
+          <button>
+            <i class="fa-brands fa-google"></i>
+          </button>
+          <button>
+            <i class="fa-brands fa-facebook"></i>
+          </button>
+        </div>
       </div>
     </div>
 
