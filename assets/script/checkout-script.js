@@ -1,6 +1,5 @@
 import * as checkout from '../modules/checkout-module.js'
 
-
 checkout.onLoadCartNumbers();
 checkout.cartNumbers();
 checkout.setItems();
