@@ -3,6 +3,7 @@ import {fetchMangas} from '../modules/fetch-manga-module.js'
 import {fetchAnime} from "../modules/fetch-anime-module.js" 
 
 import * as checkout from '../modules/checkout-module.js'
+// console.log(checkout.cart);
 // trigger card makers
 fetchMangas();
 fetchAnime();
