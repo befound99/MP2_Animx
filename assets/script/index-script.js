@@ -2,15 +2,7 @@
 import {fetchMangas} from '../modules/fetch-manga-module.js'
 import {fetchAnime} from "../modules/fetch-anime-module.js" 
 
-// // import checkout functions
-// import {fetchProducts} from "./check-out-script.js"
-// import {onLoadCartNumbers} from "./check-out-script.js"
-
-// // import checkout queryselectors
-// import {cart} from './check-out-script.js'
-
 import * as checkout from '../modules/checkout-module.js'
-console.log(checkout.cart);
 // trigger card makers
 fetchMangas();
 fetchAnime();
@@ -65,12 +57,15 @@ let loginBtn = document.getElementById("userLoginBtn");
 let loginSpan = document.getElementsByClassName("closeLogin")[0];
 
 // When the user clicks the login button, open the login modal
+function closeLogin() {
+  loginModal.style.display = "none"
+}
+
 loginBtn.onclick = function() {
 // Close the FAQ modal if it is open
 if (faqModal.style.display === "block") {
 faqModal.style.display = "none";
 }
-
 // Open the login modal
 loginModal.style.display = "block";
 };
@@ -88,3 +83,106 @@ faqModal.style.display = "none";
 loginModal.style.display = "none";
 }
 };
+
+// signup modal
+let signUpModalBody = document.querySelector('#signUpModalBody');
+let signUpModal = document.querySelector('#signUpModal');
+let closeSignupbtn = document.querySelector('#closeSignup');
+let dontHaveAcc = document.querySelector('.dontHaveAcc');
+
+console.log(signUpModalBody)
+
+function openSignup (event) {
+  event.preventDefault();
+  signUpModalBody.style.display = "block";
+  loginModal.style.display = "none";
+}
+
+function closeSignup () {
+  signUpModalBody.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == signUpModalBody) {
+    signUpModalBody.style.display = "none";
+    }
+  }
+// Sign up modal Events
+closeSignupbtn.addEventListener('click', closeSignup)
+dontHaveAcc.addEventListener('click', openSignup)
+
+// Login Form Script
+
+// get forms
+let loginForm = document.querySelector('#loginForm');
+let signupForm = document.querySelector("#signupForm");
+
+// signup submit button
+let signupSubmit = document.querySelector("#signupSubmit");
+
+// simple regular expression validations for username and password validation
+const usernameRegex = /^[a-zA-Z0-9_]+$/;
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+// local storage for users
+let usersStorage = JSON.parse(localStorage.getItem("users"))
+// function for handling form submission
+
+let loginFormSubmit = (event) => {
+  event.preventDefault();
+  const usernameInput = document.querySelector('#username');
+  const passwordInput = document.querySelector('#password');
+  let matched = false;
+
+  for (let i=0; i < usersStorage.length; i++) {
+    if (usernameInput.value === usersStorage[i].username && passwordInput.value === usersStorage[i].password) {
+      
+      alert("SUCCESS");
+      matched = true;
+      closeLogin();
+    } 
+  }
+  if (!matched) {
+    alert("Error")
+  }
+}
+// listen for login
+loginForm.addEventListener('submit', loginFormSubmit);
+
+
+let signupFormSubmit = (event) => {
+  event.preventDefault();
+  if (usersStorage == null) {
+    usersStorage = [];
+  }
+  let  signupUsername = document.querySelector('#signupUsername').value;
+  let  signupPassword = document.querySelector('#signupPassword').value;
+  let  signupConfPass = document.querySelector('#signupConfPass').value;
+
+  // RegEx Validation
+  if (!usernameRegex.test(signupUsername)){
+    alert('Invalid username. Username must contain only letters, numbers, and underscores.')
+  } else if (!passwordRegex.test(signupPassword)) {
+    alert('Invalid password. Password must be at least 8 characters long, contain at least one letter and one number.');
+  } else if (signupPassword !== signupConfPass) {
+    alert('Passwords do not match. Please try again.');
+  } else if (localStorage.getItem(signupUsername)){
+    alert('Username already exists. Please choose a different one.');
+  } else  {
+    
+  }
+  // save new user to local storage
+  let user = {
+    username: signupUsername, 
+    password: signupPassword
+    };
+
+  usersStorage.push(user);
+
+  localStorage.setItem("users", JSON.stringify(usersStorage));
+
+  alert('Sign up successful!');
+  closeSignup();
+}
+// listen for signup
+signupSubmit.addEventListener('click',signupFormSubmit);

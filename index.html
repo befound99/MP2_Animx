@@ -31,7 +31,12 @@
 
       <!-- Login/Cart -->
       <ul class="login-cart-container d-flex">
-        <li class="cart relative"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="absolute cart-item-number">0</span></li>
+        <li class="cart relative">
+          <a href="checkout.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <span class="absolute cart-item-number">0</span>
+        </li>
         <li id="userLoginBtn"><a href="#"><i class="fa-solid fa-circle-user" ></i></a></li>
       </ul>
 
@@ -139,16 +144,16 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Log in Modal -->
 
-    <div id="loginModal" class="modalLogin">
-      <div class="modal-content-login d-flex flex-col">
+    <div id="loginModal" class="modalLogin relative">
+      <div class="modal-content-login d-flex flex-col absolute">
         <div class="login-modal-header d-flex">
           <h2>Log in</h2>
           <button class="closeLogin"><i class="fa-solid fa-x"></i></button>
         </div>
-        <form>
+        <form id="loginForm">
           <div>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
@@ -158,9 +163,9 @@
             <input type="password" id="password" name="password">
           </div>
           <div>
-            <a href="#" class="dontHaveAcc d-flex">
+            <button href="#" class="dontHaveAcc d-flex">
               <span >Don't have an account? Sign up</span>
-            </a>
+            </button>
             <button type="submit" class="loginSubmit">Log in</button>
           </div>
         </form>
@@ -182,8 +187,31 @@
       </div>
     </div>
 
-
     
+    <!-- Sign up Modal -->
+    <div class="signup-modal-body" id="signUpModalBody">
+      <div class="signup-modal" id="signUpModal">
+        <div class="signup-modal-header">
+          <h2>Sign up</h2>
+          <button class="closeSignup" id="closeSignup"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <form action="#" method="#" id="signupForm">
+          <div>
+            <label for="signupUsername">New Username: </label>
+            <input type="text" name="signupUsername" id="signupUsername">
+          </div>
+          <div>
+            <label for="signupPassword">New Password: </label>
+            <input type="password" name="signupPassword" id="signupPassword">
+          </div>
+          <div>
+            <label for="signupConfirmPassword">Confirm Password:</label>
+            <input type="password" name="signupConfPass" id="signupConfPass">
+          </div>
+          <button type="submit" id="signupSubmit"><span>Register</span></button>
+        </form>
+      </div>
+    </div>
 
     <!-- section body end-->
     <footer class="d-flex flex-col">
