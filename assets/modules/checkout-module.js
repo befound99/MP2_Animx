@@ -3,9 +3,9 @@
   const res = await fetch("assets/script/products.json");
   const data = await res.json();
   const carts = document.querySelectorAll('.add-to-cart-btn');
-  const carts2 = document.querySelectorAll('.add-to-cart-btn2');
+  // const carts2 = document.querySelectorAll('.add-to-cart-btn2');
   const products = data.products;
-  const products2 = data.products2;
+  // const products2 = data.products2;
 
   console.log(products);
 
@@ -16,45 +16,59 @@
       });
     });
     
-    carts2.forEach((cart, i) => {
-      cart.addEventListener('click', () => {
-        cartNumbers(products2[i]);
-        subCost(products2[i]);
-      });
-    });
+    // carts2.forEach((cart, i) => {
+    //   cart.addEventListener('click', () => {
+    //     cartNumbers(products2[i]);
+    //     subCost(products2[i]);
+    //   });
+    // });
+    
   };
+
+  const cart = document.querySelector('.cart span');
+  console.log(cart);
+
+  function onLoadCartNumbers() {
+    let productNumbers = parseInt(localStorage.getItem('cartNumbers'));
+    if (!isNaN(productNumbers) && productNumbers > 0) {
+      cart.textContent = productNumbers;
+    } else {
+      cart.textContent = "";
+      localStorage.removeItem("productsInCart");
+      localStorage.removeItem("subCost");
+    }
+  }
   
 
-
-function onLoadCartNumbers() {
-  const cart = document.querySelector('.cart span');
-  const productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
-  if (productNumbers > 0) {
-    cart.textContent = productNumbers;
-  } else {
-    cart.textContent = "";
-  }
-}
-
 function cartNumbers(product) {
-  console.log(product);
-let productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
-localStorage.setItem('cartNumbers', productNumbers + 1);
-cart.textContent = productNumbers + 1;
-setItems(product);
+  let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
+  let productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
+  
+  if (cartItems[product.tag]) {
+    cartItems[product.tag].inCart += 1;
+  } else {
+    cartItems[product.tag] = {...product, inCart: 1};
+  }
+  
+  localStorage.setItem('cartNumbers', productNumbers + 1);
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  
+  cart.textContent = productNumbers + 1;
 }
 
 function setItems(product) {
-let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
+  let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
 
-if (!cartItems[product.tag]) {
+  if (!cartItems[product.tag]) {
     cartItems[product.tag] = {...product, inCart: 0};
+  }
+
+  cartItems[product.tag].inCart += 1;
+
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
-cartItems[product.tag].inCart += 1;
 
-localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-}
 
 function subCost(product) {
 let cartCost = parseInt(localStorage.getItem('subCost')) || 0;
@@ -104,6 +118,8 @@ function decreaseQuantity(tag) {
       }
     }
 }
+
+
 
 const increaseQuantity = (tag) => {
     let cartItems = JSON.parse(localStorage.getItem('productsInCart'));
@@ -156,6 +172,9 @@ const increaseQuantity = (tag) => {
       }
     }
   };
+  onLoadCartNumbers();
+  displayCart();
+
 
 export {fetchProducts, onLoadCartNumbers, cartNumbers, setItems, subCost, removeItem, decreaseQuantity, increaseQuantity, displayCart};
 

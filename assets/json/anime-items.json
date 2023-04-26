@@ -3,13 +3,13 @@
     {
       "title": "Mashle",
       "genre": "Parody, Action, School Life",
-      "image": "assets/images/mashle-1680202211.png",
+      "image": "assets/images/Mashle.png",
       "price": "3400"
     },
     {
       "title": "Kimetsu no Yaiba",
       "genre": "Action, Adventure, Demons",
-      "image": "assets/images/kimetsu-no-yaiba-katanakaji-no-sato-hen-1680122874.jpg",
+      "image": "assets/images/Kimetsu no Yaiba.jpg",
       "price": "3600"
     },
     {
@@ -27,13 +27,13 @@
     {
       "title": "My Love Story With Yamada-kun at Lv999",
       "genre": "Romance, Comedy, Video Games",
-      "image": "assets/images/yamada-xmas.jpg",
+      "image": "assets/images/My Love Story With Yamada-kun at Lv999.jpg",
       "price": "3400"
     },
     {
       "title": "Tengoku-Daimakyou",
       "genre": "Survival, Adventure, Monsters",
-      "image": "assets/images/Tengoku Daimakyou.jpg",
+      "image": "assets/images/Tengoku-Daimakyou.jpg",
       "price": "3426"
     }
   ]

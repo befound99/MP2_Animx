@@ -152,6 +152,7 @@ nav {
 .cart {
   display: flex;
 }
+
 .cart-item-number {
   background-color: #D16923;
   padding: 0 7px ;
