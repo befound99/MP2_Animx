@@ -693,6 +693,8 @@ footer {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  backdrop-filter: blur(1px);
+  transition: all 250ms;
 }
 
 /* Modal Content/Box */
@@ -721,8 +723,13 @@ footer {
 .modal-content-login {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  width: 50vmin; /* Could be more or less, depending on screen size */
+  width: clamp(300px, 50vmin, 50vmin ); /* Could be more or less, depending on screen size */
   justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid #D16923;
+  box-shadow: 0 0 5px #D16923,
+              0 0 20px #d1692371;
 }
 
 .modal-content-login form {
@@ -734,7 +741,7 @@ footer {
   background-color: whitesmoke;
 }
 .modal-content-login form {
-  font-size: clamp(16px,2vw,2vw);
+  font-size: clamp(16px,2vw,20px);
 }
 .modal-content-login form > * {
   flex-grow: 1;
@@ -742,17 +749,25 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.modal-content-login form input{
+form input{
   height: 1.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  margin-left: 1rem;
+  background-color: rgb(219, 219, 219);
 }
 .loginSubmit {
-  background-color: transparent;
+  background-color: #D16923;
   border: 0;
   cursor: pointer;
+  color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .dontHaveAcc {
   color: grey;
-  font-size: 1.5vmin;
+  font-size: clamp(12px, 1.5vmin, 1.5vmin);
   width: fit-content;
   align-self: flex-end;
 }
@@ -777,14 +792,21 @@ footer {
   align-items: center;
   padding-bottom: 1rem;
   gap: 1rem;
+  background-color: whitesmoke;
+  justify-content: center;
+  height: 4rem;
 }
 .loginWSocials > button{
-  padding-block: 10px;
-  width: 80%;
+  height: clamp(35px, 5vmin, 5vmin);
+  width: clamp(35px, 5vmin, 5vmin);
+  border-radius: 50%;
   border: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #d6d6d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 .loginWSocials > button:nth-child(1) i{
   color: #161B22;

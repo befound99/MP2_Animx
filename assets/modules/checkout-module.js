@@ -2,7 +2,7 @@
 
 
  async function fetchProducts(){
-  const res = await fetch("assets/script/products.json");
+  const res = await fetch("../json/products.json");
   const data = await res.json();
   const products = data.products;
   const products2 = data.products2;
@@ -11,7 +11,6 @@
   const carts2 = document.querySelectorAll('.add-to-cart-btn2');
 
   console.log(products);
-
     carts.forEach((cart, i) => {
       cart.addEventListener('click', () => {
         cartNumbers(products[i]);
