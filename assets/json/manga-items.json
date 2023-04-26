@@ -9,7 +9,7 @@
     {
       "title": "Dr Stone",
       "genre": "Survival, Science, Adventure",
-      "image": "assets/images/dr-stone-7194f44a287d.jpg",
+      "image": "assets/images/Dr Stone.jpg",
       "price": "700"
     },
     {
@@ -21,7 +21,7 @@
     {
       "title": "One Punch-Man",
       "genre": "Action, Superhero, Slice of Life",
-      "image": "assets/images/OPM.jpg",
+      "image": "assets/images/One Punch-Man.jpg",
       "price": "690"
     }
   ]

@@ -10,7 +10,7 @@ import {fetchAnime} from "../modules/fetch-anime-module.js"
 // import {cart} from './check-out-script.js'
 
 import * as checkout from '../modules/checkout-module.js'
-console.log(checkout.cart);
+// console.log(checkout.cart);
 // trigger card makers
 fetchMangas();
 fetchAnime();

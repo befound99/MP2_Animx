@@ -22,7 +22,7 @@ export let fetchAnime = async () => {
             </a>
           </div>
           <div class="actions-container">
-            <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
+            <button class="add-to-cart-btn2" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
 
             <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus"></i></button>
 
