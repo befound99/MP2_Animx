@@ -10,26 +10,24 @@
   const carts = document.querySelectorAll('.add-to-cart-btn');
   const carts2 = document.querySelectorAll('.add-to-cart-btn2');
 
-  console.log(products);
-
-    carts.forEach((cart, i) => {
-      cart.addEventListener('click', () => {
-        cartNumbers(products[i]);
-        subCost(products[i]);
-      });
+  carts.forEach((cart, i) => {
+    cart.addEventListener('click', () => {
+      cartNumbers(products[i]);
+      subCost(products[i]);
     });
-    
-    carts2.forEach((cart, i) => {
-      cart.addEventListener('click', () => {
-        cartNumbers(products2[i]);
-        subCost(products2[i]);
-      });
+  });
+  
+  carts2.forEach((cart, i) => {
+    cart.addEventListener('click', () => {
+      cartNumbers(products2[i]);
+      subCost(products2[i]);
     });
+  });
   };
 
  
-
- function onLoadCartNumbers() {
+  
+  function onLoadCartNumbers() {
   const cart = document.querySelector('.cart span');
   const productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
   if (productNumbers > 0) {
@@ -46,9 +44,9 @@ cart.textContent = productNumbers + 1;
 setItems(product);
 }
 
-function setItems(product) {
+function setItems(product) { 
 let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
-
+debugger
 if (!cartItems[product.tag]) {
     cartItems[product.tag] = {...product, inCart: 0};
 }
