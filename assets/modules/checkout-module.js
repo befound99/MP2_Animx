@@ -24,9 +24,10 @@
     });
   };
   
-  const cart = document.querySelector('.cart span');
+
 
 function onLoadCartNumbers() {
+  const cart = document.querySelector('.cart span');
   const productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
   if (productNumbers > 0) {
     cart.textContent = productNumbers;
@@ -36,6 +37,7 @@ function onLoadCartNumbers() {
 }
 
 function cartNumbers(product) {
+  console.log(product);
 let productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
 localStorage.setItem('cartNumbers', productNumbers + 1);
 cart.textContent = productNumbers + 1;
