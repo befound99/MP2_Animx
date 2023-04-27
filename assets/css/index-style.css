@@ -773,6 +773,8 @@ footer {
   font-size: clamp(12px, 1.5vmin, 1.5vmin);
   width: fit-content;
   align-self: flex-end;
+  border: 0;
+  cursor: pointer;
 }
 /* OR */
 .orHr {
