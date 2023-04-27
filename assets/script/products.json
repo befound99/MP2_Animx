@@ -1,35 +1,76 @@
 {
-    "products": [
-      {
-        "name": "anime1",
-        "tag": "Tensei Shitara Slime",
-        "genre": "action, isekai, fantasy",
-        "price": 1000,
-        "inCart": 0
-      },
-      {
-        "name": "anime2",
-        "tag": "Overlord",
-        "genre": "action, isekai, fantasy",
-        "price": 2000,
-        "inCart": 0
-      }
-    ],
-    "products2": [
-      {
-        "name": "merch1",
-        "tag": "Campfire Cooking in Another World with My Absurd Skill",
-        "genre": "action, isekai, fantasy",
-        "price": 2000,
-        "inCart": 0
-      },
-      {
-        "name": "merch2",
-        "tag": "Handyman Saitou in Another World",
-        "genre": "action, isekai, fantasy",
-        "price": 2000,
-        "inCart": 0
-      }
-    ]
-  }
-  
+  "products": [
+    {
+      "name": "Campfire Cooking in Another World with My Absurd Skill",
+      "tag": "Campfire Cooking in Another World with My Absurd Skill",
+      "genre": "Cooking, Isekai, Fantasy",
+      "price": 675,
+      "inCart": 0
+    },
+    {
+      "name": "Dr.Stone",
+      "tag": "Dr Stone",
+      "genre": "Survival, Science,",
+      "price": 700,
+      "inCart": 0
+    },
+    {
+      "name": "Overlord",
+      "tag": "Overlord",
+      "genre": "Survival, Science,",
+      "price": 690,
+      "inCart": 0
+    },
+    {
+      "name": "One Punch-Man",
+      "tag": "One Punch-Man",
+      "genre": "Survival, Science,",
+      "price": 700,
+      "inCart": 0
+    }
+  ],
+  "products2": [
+    {
+      "name": "Mashle",
+      "tag": "Mashle",
+      "genre": "Parody, Action, School Life",
+      "price": 3400,
+      "inCart": 0
+    },
+    {
+      "name": "Kimetsu no Yaiba",
+      "tag": "Kimetsu no Yaiba",
+      "genre": "Action, Adventure, Demons",
+      "price": 3600,
+      "inCart": 0
+    },
+    {
+      "name": "[Oshi no Ko]",
+      "tag": "[Oshi no Ko]",
+      "genre": "Reincarnation, Psychological, Supernatural",
+      "price": 3426,
+      "inCart": 0
+    },
+    {
+      "name": "My Hero Academia",
+      "tag": "My Hero Academia",
+      "genre": "Superhero, Action, School Life",
+      "price": 3500,
+      "inCart": 0
+    },
+    {
+      "name": "My Love Story With Yamada-kun at Lv999",
+      "tag": "My Love Story With Yamada-kun at Lv999",
+      "genre": "Romance, Comedy, Video Games",
+      "price": 3400,
+      "inCart": 0
+    },
+    {
+      "name": "Tengoku-Daimakyou",
+      "tag": "Tengoku-Daimakyou",
+      "genre": "Survival, Adventure, Monsters",
+      "price": 3426,
+      "inCart": 0
+    }
+  ]
+}

@@ -35,15 +35,21 @@
 .opacity:hover {
   opacity: 1;
 }
-
+::selection {
+  background-color: #D16923;
+  color: whitesmoke;
+}
 
 /* Pag container */
 .page-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.151)),url(/assets/images/587749-Blonde-Boy.jpg);
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.151)), 
+    url(../images/Blonde-Boy.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   min-width: 320px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* navbar */
@@ -51,7 +57,7 @@ nav {
   width: clamp(320px, 95%, 1440px);
   margin-inline: auto;
   background-color: rgba(214, 214, 214, 0.40);
-  backdrop-filter: blur(6px);
+  backdrop-filter: invert(80%) blur(2px);
   border-radius: 5px;
   justify-content: space-between;
   padding-block: 5px;
@@ -146,6 +152,7 @@ nav {
 .cart {
   display: flex;
 }
+
 .cart-item-number {
   background-color: #D16923;
   padding: 0 7px ;
@@ -209,7 +216,7 @@ header {
   width: clamp(320px, 95%, 1440px);
   height: 55px;
   background-color: rgba(214, 214, 214, 0.40);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(2px);
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   justify-content: end;
@@ -297,26 +304,12 @@ section {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 }
 /* Card and Card Details */
-.card-group-manga {
-  margin: 1rem;
-  width: 200px;
-}
 .card-group-anime {
   margin: 1rem;
-  width: 300px;
+  width: clamp(300px, 15vw, 15vw);
 }
 /* card cover */
-.card-manga {
-  background-color: lightsalmon;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  justify-content: end;
-  transition: all 250ms;
-}
-.card-manga:hover {
-  transform: scale(1.2);
-}
+
 .card-anime {
   background-color: lightsalmon;
   aspect-ratio: 16/9;
@@ -327,88 +320,7 @@ section {
   overflow: hidden;
 }
 .card-anime:hover {
-  transform: scale(1.2);
-}
-.manga-card-1 {
-  background-image: url(/assets/images/Tensei\ Shitara\ Slime.jpg);
-}
-.manga-card-2 {
-  background-image: url(/assets/images/Overlord.jpg);
-}
-.manga-card-3 {
-  background-image: url(/assets/images/Campfire\ Cooking\ in\ Another\ World\ with\ My\ Absurd\ Skill.jpg);
-}
-.manga-card-4 {
-  background-image: url(/assets/images/Handyman\ Saitou\ in\ Another\ World.jpg);
-}
-
-/* quick view */
-.quick-view-container {
-  justify-content: center;
-  height: 50%;
-
-}
-.quick-view-btn {
-  width: 145px;
-  height: fit-content;
-  border: 0;
-  background-color: #D16923;
-  color: whitesmoke;
-  justify-content: space-evenly;
-  padding: 5px 10px ;
-  border-radius: 5px;
-  align-items: center;
-  transition: transform 250ms;
-}
-.quick-view-btn:hover {
-  transform:scale(1.1);
-  z-index: 2;
-}
-
-.action-div {
-  justify-content: end;
-  align-items: center;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.40),rgba(0, 0, 0, 0.80));
-
-}
-/* Actions button */
-.actions-container button {
-  flex-grow: 1;
-  border: 0;
-  color: whitesmoke;
-  padding: 5px 10px;
-  margin: 5px 10px;
-  border-radius: 5px;
-}
-.add-to-cart-btn {
-  background-color: #D16923;
-  transition: all 250ms;
-  /* opacity: 0; */
-}
-.add-to-cart-btn:hover {
-  /* opacity: 1; */
   transform: scale(1.1);
-  z-index: 2;
-}
-.add-to-wishlist-btn {
-  background-color: rgb(255, 49, 90);
-}
-.buy-now-btn {
-  background-color: rgb(88, 223, 88);
-}
-.card-name {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-}
-.card-tags {
-  list-style-type: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  flex-wrap: wrap;
-}
-.genre{
-  font-weight: 600;
 }
 @media (width <= 1000px) {
   .section-container {
@@ -418,7 +330,7 @@ section {
 /* Left Section */
 .section-container-left {
   width: 70%;
-  padding-block: 1rem;
+  padding-top: 1rem;
   padding-inline: clamp(0.1px,2vw,1rem);
 }
 
@@ -434,30 +346,198 @@ section {
   padding: 1rem;
   align-items: center;
 }
+.manga-section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.anime-section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .section-body {
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 @media (width <= 502px){
   .section-body {
     justify-content: center;
   }
 } 
-/* Anime section */
-.anime-card-1 {
-  background-image: url(/assets/images/The\ Angel\ Next\ Door.jpg);
+
+/* manga cards */
+.card-group-manga {
+  margin: 0 1rem 1rem 1rem;
 }
-.anime-card-2 {
-  background-image: url(/assets/images/Oshi-no-ko-anime.jpg);
+.card-manga {
+  position: relative;
+  width: clamp(180px, 10vw, 10vw);
+  height: clamp(270px, 15vw, 15vw);
+  display: flex;
+  flex-direction: column;
+  transition: all 250ms;
 }
-.anime-card-3{
-  background-image: url(/assets/images/kimetsu-no-yaiba-katanakaji-no-sato-hen-1680122874.jpg);
+.card-manga:hover {
+  transform: scale(1.1);
 }
-.anime-card-4 {
-  background-image: url(/assets/images/mas);
+.card-manga > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
+.action-div {
+  background: linear-gradient(rgba(0, 0, 0,0.2),rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8));
+  flex-grow: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 0;
+  transition: all 250ms;
+}
+.action-div:hover {
+  opacity: 1;
+}
+.quickview-container {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.quickview-btn {
+  height: fit-content;
+  padding: 5px 10px;
+  background-color: #D16923;
+  color: whitesmoke;
+  border: 0;
+  border-radius: 5px;
+  transition: all 250ms;
+  cursor: pointer;
+  font-size: clamp(12px, 1vw, 1vw);
+  display: flex;
+  align-items: center;
+}
+.fa-regular.fa-eye{
+  margin-left: 5px;
+}
+.quickview-btn:hover {
+  transform: scale(1.1);
+}
+.actions-container {
+  display: flex;
+
+}
+.actions-container > button {
+  padding-block: 5px;
+  font-size: clamp(12px, 1vw, 1vw);
+  flex-grow: 1;
+  margin: 1vmin;
+  border: 0;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.actions-container > button:nth-child(1) {
+  background-color: #D16923;
+  transition: all 250ms;
+}
+.actions-container > button:nth-child(1):hover {
+  transform: scale(1.1);
+}
+.actions-container > button:nth-child(2) {
+  background-color: #bd1f3e;
+}
+.actions-container > button:nth-child(3) {
+  background-color: #4e8f0c;
+}
+/* manga details */
+.manga-details {
+  width: 10vw;
+}
+.manga-title {
+  font-weight: 800;
+  color: #D16923;
+  font-size: clamp(20px, 1vw, 1vw);
+}
+.manga-price {
+  color: #4e8f0c;
+}
+.manga-genre {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: clamp(14px, 0.8vw, 0.8vw);
+}
+
+/* Anime Cards */
+.card-group-anime {
+  margin: 0 1rem 1rem 1rem;
+}
+.card-anime {
+  display: flex;
+  position: relative;
+  height: clamp(180px, 10vw, 10vw);
+  width: clamp(270px, 15vw, 15vw);
+  display: flex;
+  flex-direction: column;
+  transition: all 250ms;
+}
+.card-anime > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.anime-action-div {
+  flex-grow: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: all 250ms;
+}
+.anime-action-div:hover {
+  opacity: 100%;
+}
+.anime-quickview-container {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+.anime-quickview-container button {
+  border: 0;
+  border-radius: 5px;
+  background-color: #D16923;
+  color: whitesmoke;
+  padding: 5px 10px;
+  font-size: clamp(12px, 1vw, 1vw);
+  cursor: pointer;
+  transition: all 250ms;
+}
+.anime-quickview-container button:hover {
+  transform: scale(1.1);
+}
+/* Anime Details */
+.anime-title {
+  font-weight: 800;
+  color: #D16923;
+  font-size: clamp(20px, 1vw, 1vw);
+}
+.anime-genre {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: clamp(14px, 0.8vw, 0.8vw);
+}
+.anime-price {
+  color: #4e8f0c;
+}
 /* Right Section */
 .section-container-right {
   width: 30%;
@@ -479,9 +559,12 @@ section {
   width: 100%;
   background-color: #d6d6d6;
   border-radius: 5px;
-  
+  padding: 1rem;
 }
-
+.merchandise-header {
+  align-items: center;
+  justify-content: space-between;
+}
 /* footer */
 footer {
   height: 20vh;
@@ -497,6 +580,11 @@ footer {
   background-color: #d6d6d6;
   flex-grow: 1;
   border-radius: 5px;
+}
+@media (width <= 490px) {
+  .footer-contacts-container {
+    flex-direction: column;
+  }
 }
 .footer-contacts-left, .footer-contacts-right {
   flex-grow: 1;
@@ -597,32 +685,163 @@ footer {
 /* Login Modal */
 /* The Modal (background) */
 .modalLogin {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
+  z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  backdrop-filter: blur(1px);
+  transition: all 250ms;
 }
 
 /* Modal Content/Box */
-.modal-content-login {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.login-modal-header {
+  background-color: #D16923;
+  padding: 1rem;
+  position: relative;
+  color: white;
 }
-
+.login-modal-header h2 {
+  font-size: clamp(16px,2vw,2vw);
+}
 /* Close Button */
 .closeLogin {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 12px;
   font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  height: fit-content;
+  background-color: transparent;
+}
+.modal-content-login {
+  background-color: #fefefe;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(300px, 50vmin, 50vmin ); /* Could be more or less, depending on screen size */
+  justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid #D16923;
+  box-shadow: 0 0 5px #D16923,
+              0 0 20px #d1692371;
+}
+
+.modal-content-login form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background-color: whitesmoke;
+}
+.modal-content-login form {
+  font-size: clamp(16px,2vw,20px);
+}
+.modal-content-login form > * {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-content-login form input{
+  height: 1.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  margin-left: 1rem;
+  background-color: rgb(219, 219, 219);
+}
+.loginSubmit {
+  background-color: #D16923;
+  border: 0;
+  cursor: pointer;
+  color: whitesmoke;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.dontHaveAcc {
+  color: grey;
+  font-size: clamp(12px, 1.5vmin, 1.5vmin);
+  width: fit-content;
+  align-self: flex-end;
+}
+/* OR */
+.orHr {
+  border-top: 2px solid rgba(128, 128, 128, 0.521);
+}
+.orDiv{
+  height: 1rem;
+  background-color: whitesmoke;
+}
+.orDiv span{
+  transform: translate(-50%, -60%);
+  left: 50%;
+  top: 0;
+  background-color: whitesmoke;
+  padding-inline: 10px;
+  font-size: 13px;
+  color: #888;
+}
+.loginWSocials {
+  align-items: center;
+  padding-bottom: 1rem;
+  gap: 1rem;
+  background-color: whitesmoke;
+  justify-content: center;
+  height: 4rem;
+}
+.loginWSocials > button{
+  height: clamp(35px, 5vmin, 5vmin);
+  width: clamp(35px, 5vmin, 5vmin);
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6d6d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.loginWSocials > button:nth-child(1) i{
+  color: #161B22;
+  font-size: 1.25rem;
+  margin-right: 3%;
+}
+.loginWSocials > button:nth-child(1) span {
+  font-weight: 700;
+}
+.loginWSocials > button:nth-child(2) i{
+  background-image: 
+    linear-gradient(135deg, #4285F4 ,#EA4335,#FBBC04,#33A050);
+    -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 3%;
+}
+.loginWSocials > button:nth-child(2) span{
+  font-weight: 700;
+}
+.loginWSocials > button:nth-child(3) i{
+  background-image: 
+    linear-gradient(#395693 ,#3f5b97);
+    -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 3%;
+}
+.loginWSocials > button:nth-child(3) span{
+  font-weight: 700;
 }
 
 .closeLogin:hover,
@@ -632,4 +851,106 @@ footer {
   cursor: pointer;
 }
 
-
+.signup-modal-body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4) ;
+  backdrop-filter: blur(1px);
+  z-index: 4;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: all 250ms;
+  transition-delay: 250ms;
+}
+.opacity-100{
+  opacity: 100%;
+}
+.signup-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(300px, 50vmin, 50vmin);
+  background-color: whitesmoke;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid #D16923;
+  box-shadow: 0 0 5px #D16923,
+              0 0 30px #d1692375;
+}
+.signup-modal form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.signup-modal form > * {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: clamp(16px,2vw,20px);
+  background-color: whitesmoke;
+}
+.signup-modal form label {
+  width: 50%;
+}
+.signup-modal form input {
+  height: 1.5rem;
+  width: 100%;
+  border: 0;
+  background-color: #d6d6d6;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.signup-modal form input:focus {
+  outline: none;
+}
+.signup-modal form button[type = submit] {
+  background-color: #D16923;
+  color: whitesmoke;
+  width: clamp(80px, 50%, 200px);
+  align-self: flex-end;
+  border: 0;
+  border-radius: 5px;
+  padding-block: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.signup-modal-header {
+  position: relative;
+  padding: 1rem;
+  background-color: #D16923;
+}
+.signup-modal-header h2 {
+  color: whitesmoke;
+  font-size: clamp(16px,2vw,2vw);
+}
+.closeSignup {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.closeSignup:hover {
+  color: grey;
+}
+.signup-modal-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+}
+.signup-modal-footer input{
+  width: clamp(80px,50%, 200%);
+  height: 1.5rem;
+  background-color: #D16923;
+  border: 0;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+}

@@ -12,8 +12,7 @@
   <title>Animx | Bringing Your Favorite Anime and Manga to Life</title>
 </head>
 <body>
-  <script src="assets/script/index-script.js" defer></script>
-    
+  <script type="module" src="./assets/script/index-script.js" defer></script>
   <div class="page-container">
     <!-- Nav -->
     <nav class="d-flex">
@@ -32,8 +31,12 @@
 
       <!-- Login/Cart -->
       <ul class="login-cart-container d-flex">
-        <li class="cart relative"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="absolute cart-item-number">0</span></li>
-        <li><a href="#"><i class="fa-solid fa-circle-user" id="userLoginBtn"></i></a></li>
+        <li class="cart relative"><a href="checkout.html">
+          <i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="absolute cart-item-number">0</span></li>
+        <li id="userLoginBtn">
+          <a href="#"><i class="fa-solid fa-circle-user" ></i></a>
+        </li>
       </ul>
 
       <!-- Burger/Menu Button -->
@@ -57,16 +60,12 @@
         <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </header>
-    
       
     <!-- section body -->
     <div class="section-body1 d-flex flex-col">
-      <button class="add-to-cart-btn">add</button>
-    <button class="add-to-cart-btn">add</button>
-
-      <div class="carousel">
-        <!-- FUTURE CAROUSEL HERE -->
-      </div>
+      <!-- <div class="carousel">
+         FUTURE CAROUSEL HERE
+      </div> -->
       <div class="section-container d-flex">
         <div class="section-container-left d-flex flex-col">
           <!-- Manga Section -->
@@ -76,284 +75,15 @@
               <a href="#" ><button class="viewmore-btn transition-default">View More</button></a>
             </div>
             <!-- Card container -->
-            <div class="section-body d-flex">
-              <!-- card group -->
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-1 -->
-                <div class="card-manga manga-card-1 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Tensei Shitara Slime</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-2 -->
-                <div class="card-manga manga-card-2 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Overlord</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Game, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-3 -->
-                <div class="card-manga manga-card-3 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Campfire Cooking In Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-4 -->
-                <div class="card-manga manga-card-4 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-5 -->
-                <div class="card-manga manga-card-5 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-6 -->
-                <div class="card-manga manga-card-6 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-7 -->
-                <div class="card-manga manga-card-7 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-8 -->
-                <div class="card-manga manga-card-8 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-9 -->
-                <div class="card-manga manga-card-9 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <div class="card-group-manga d-flex flex-col">
-                <!-- manga-card-10 -->
-                <div class="card-manga manga-card-10 d-flex flex-col">
-                  <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">Handyman Saitou in Another World</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre: &nbsp;</span>
-                    <li>Action, &nbsp;</li>
-                    <li>Isekai, &nbsp;</li>
-                    <li>Fantasy</li>
-                  </ul>
-                  <p class="card-price">₱ 1000.00</p>
-                </div>
-              </div>
-              <!-- card group end-->
+            <div class="manga-section-body d-flex">
+              <!-- Manga Cards go here -->
+              <!-- ^ Manga Cards go here ^ -->
             </div>
             <!-- Card container end-->
           </section>
           <!-- Manga Section end-->
+
+
 
           <!-- Anime Section -->
           <section class="section d-flex flex-col">
@@ -362,166 +92,11 @@
               <a href="#" ><button class="viewmore-btn transition-default">View More</button></a>
             </div>
             <!-- Card container -->
-            <div class="section-body d-flex">
-              <!-- card group -->
-              <div class="card-group-anime d-flex flex-col">
-                <!-- anime-card-# -->
-                <div class="card-anime anime-card-1 d-flex flex-col">
-                    <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container d-flex">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container d-flex">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre:&nbsp;</span>
-                    <li><span>Slice of Life,&nbsp;</span></li>
-                    <li>Romance,&nbsp;</li>
-                    <li>Comedy</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-group-anime d-flex flex-col">
-                <!-- anime-card-# -->
-                <div class="card-anime anime-card-2 d-flex flex-col">
-                    <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container d-flex">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container d-flex">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre:&nbsp;</span>
-                    <li><span>Slice of Life,&nbsp;</span></li>
-                    <li>Romance,&nbsp;</li>
-                    <li>Comedy</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-group-anime d-flex flex-col">
-                <!-- anime-card-# -->
-                <div class="card-anime anime-card-3 d-flex flex-col">
-                    <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container d-flex">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container d-flex">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre:&nbsp;</span>
-                    <li><span>Slice of Life,&nbsp;</span></li>
-                    <li>Romance,&nbsp;</li>
-                    <li>Comedy</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="anime-section-body d-flex">
+              <!-- Anime card goes here -->
+              
 
-              <div class="card-group-anime d-flex flex-col">
-                <!-- anime-card-# -->
-                <div class="card-anime  anime-card-4 d-flex flex-col">
-                    <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container d-flex">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container d-flex">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre:&nbsp;</span>
-                    <li><span>Slice of Life,&nbsp;</span></li>
-                    <li>Romance,&nbsp;</li>
-                    <li>Comedy</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-group-anime d-flex flex-col">
-                <!-- anime-card-# -->
-                <div class="card-anime  anime-card-4 d-flex flex-col">
-                    <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container d-flex">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container d-flex">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre:&nbsp;</span>
-                    <li><span>Slice of Life,&nbsp;</span></li>
-                    <li>Romance,&nbsp;</li>
-                    <li>Comedy</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-group-anime d-flex flex-col">
-                <!-- anime-card-# -->
-                <div class="card-anime  anime-card-4 d-flex flex-col">
-                    <div class="action-div d-flex flex-col opacity opacity:hover transition-default">
-                    <div class="quick-view-container d-flex">
-                      <button class="quick-view-btn d-flex"><span>Quick View</span><i class="fa-solid fa-eye"></i></button>
-                    </div>
-                    <div class="actions-container d-flex">
-                      <!-- action buttons -->
-                      <button class="add-to-cart-btn" title="add to cart"><i class="fa-solid fa-cart-plus"></i></button>
-                      <button class="add-to-wishlist-btn" title="add to wishlist"><i class="fa-solid fa-heart-circle-plus" ></i></button>
-                      <button class="buy-now-btn" title="buy now"><i class="fa-regular fa-money-bill-1"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card details -->
-                <div class="card-details">
-                  <p class="card-name">The Angel Next Door Spoils Me Rotten</p>
-                  <ul class="card-tags d-flex">
-                    <span class="genre">Genre:&nbsp;</span>
-                    <li><span>Slice of Life,&nbsp;</span></li>
-                    <li>Romance,&nbsp;</li>
-                    <li>Comedy</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- card group end-->
+              <!-- ^Anime card goes here^ -->
             </div>
             <!-- Card container end-->
           </section>
@@ -530,7 +105,10 @@
         <div class="section-container-right d-flex">
           <!-- Merchandise Sections -->
           <section class="merchandise">
-            
+            <div class="merchandise-header d-flex">
+              <span class="section-name">Merchandise</span>
+              <a href="#"><button class="viewmore-btn transition-default">View More</button></a>
+            </div>
           </section>
         </div>
       </div>
@@ -565,26 +143,74 @@
         </div>
       </div>
     </div>
-
+    
     <!-- Log in Modal -->
 
-    <div id="loginModal" class="modalLogin">
-      <div class="modal-content-login">
-        <span class="closeLogin">&times;</span>
-        <h2>Log in</h2>
-        <form>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
-          <button type="submit">Log in</button>
+    <div id="loginModal" class="modalLogin relative">
+      <div class="modal-content-login d-flex flex-col absolute">
+        <div class="login-modal-header d-flex">
+          <h2>Log in</h2>
+          <button class="closeLogin"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <form id="loginForm">
+          <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+          </div>
+          <div>
+            <button href="#" class="dontHaveAcc d-flex">
+              <span >Don't have an account? Sign up</span>
+            </button>
+            <button type="submit" class="loginSubmit">Log in</button>
+          </div>
         </form>
-        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <hr class="orHr">
+        <div class="orDiv relative">
+          <span class="absolute">or login with</span>
+        </div>
+        <div class="loginWSocials d-flex ">
+          <button>
+            <i class="fa-brands fa-github"></i>
+          </button>
+          <button>
+            <i class="fa-brands fa-google"></i>
+          </button>
+          <button>
+            <i class="fa-brands fa-facebook"></i>
+          </button>
+        </div>
       </div>
     </div>
 
-
     
+    <!-- Sign up Modal -->
+    <div class="signup-modal-body" id="signUpModalBody">
+      <div class="signup-modal" id="signUpModal">
+        <div class="signup-modal-header">
+          <h2>Sign up</h2>
+          <button class="closeSignup" id="closeSignup"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <form action="#" method="#" id="signupForm">
+          <div>
+            <label for="signupUsername">New Username: </label>
+            <input type="text" name="signupUsername" id="signupUsername">
+          </div>
+          <div>
+            <label for="signupPassword">New Password: </label>
+            <input type="password" name="signupPassword" id="signupPassword">
+          </div>
+          <div>
+            <label for="signupConfirmPassword">Confirm Password:</label>
+            <input type="password" name="signupConfPass" id="signupConfPass">
+          </div>
+          <button type="submit" id="signupSubmit"><span>Register</span></button>
+        </form>
+      </div>
+    </div>
 
     <!-- section body end-->
     <footer class="d-flex flex-col">
@@ -617,7 +243,6 @@
       </div>
     </footer>
   </div>
-  <script src="assets/script/index-script.js"></script>
-  <script src="assets/script/check-out-script.js"></script>
+
 </body>
 </html>
