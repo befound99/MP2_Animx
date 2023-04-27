@@ -47,22 +47,23 @@ setItems(product);
 }
 
 function setItems(product) {
-let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
+  let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
+  
+  if (!cartItems[product.tag]) {
+      cartItems[product.tag] = {...product, inCart: 0};
+  }
+  
+  cartItems[product.tag].inCart += 1;
+  
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  }
 
-if (!cartItems[product.tag]) {
-    cartItems[product.tag] = {...product, inCart: 0};
-}
-
-cartItems[product.tag].inCart += 1;
-
-localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-}
-
-function subCost(product) {
-let cartCost = parseInt(localStorage.getItem('subCost')) || 0;
-
-    localStorage.setItem("subCost", cartCost + product.price);
-}
+  function subCost(product) {
+    let cartCost = parseInt(localStorage.getItem('subCost')) || 0;
+    
+        localStorage.setItem("subCost", cartCost + product.price);
+    }
+  
 
 
 
