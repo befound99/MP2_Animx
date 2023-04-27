@@ -1,0 +1,188 @@
+{
+   "figures" : [
+      {
+         "name" : "Fairy Tail Natsu, Igneel, and Happy Action Figure",
+         "image" : "assets/images/merchandise/af-1.svg",
+         "price" : "₱ 1,620.00",
+         "location" : "Marilao, Bulacan",
+         "series" : "Fairy Tail" 
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/af-2.svg",
+         "price" : "₱ 389.00",
+         "location" : "Marilao, Bulacan",
+         "series" : "One Piece"
+      },
+
+      {
+         "name" : "Tensei shitara Slime Datta Ken Diablo Action Figure",
+         "image" : "assets/images/merchandise/af-3.svg",
+         "price" : "₱ 420.50",
+         "location" : "Marilao, Bulacan",
+         "series" : "Tensei shitara Slime Datta Ken"
+      },
+
+      {
+         "name" : "Fairy Tail Lucy, Natsu, Zeref, Happy Action Figure",
+         "image" : "assets/images/merchandise/af-4.svg",
+         "price" : "₱ 635.15",
+         "location" : "Marilao, Bulacan",
+         "series" : "Fairy Tail"     
+      },
+
+      {
+         "name" : "Hunter x HUnter Hisoka and Kurapika Action Figures",
+         "image" : "assets/images/merchandise/af-5.svg",
+         "price" : "₱ 620.00",
+         "location" : "Cainta, Rizal",
+         "series" : "Hunter x Hunter" 
+      },
+
+      {
+         "name" : "My Hero Academia Action Figures",
+         "image" : "assets/images/merchandise/af-6.svg",
+         "price" : "₱ 489.00",
+         "location" : "Marilao, Bulacan",
+         "series" : "My Hero Academia"
+      },
+
+      {
+         "name" : "One Punch Man Action Figure",
+         "image" : "assets/images/merchandise/af-7.svg",
+         "price" : "₱ 670.00",
+         "location" : "Calamba, Laguna",
+         "series" : "One Punch Man"
+      },
+
+      {
+         "name" : "Dr.Stone Tsukasa Action Figure",
+         "image" : "assets/images/merchandise/af-8.svg",
+         "price" : "₱ 820.25",
+         "location" : "Marilao, Bulacan",
+         "series" : "Dr. Stone"     
+      }
+   ],
+
+   "apparels" : [
+      {
+         "name" : "Fairy Tail Action Figures",
+         "image" : "assets/images/merchandise/a-1.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan" 
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/a-2.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/a-3.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/a-4.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      }
+   ],
+
+   "bags" : [
+      {
+         "name" : "Fairy Tail Action Figures",
+         "image" : "assets/images/merchandise/b-1.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan" 
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/b-2.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/b-3.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/b-4.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      }
+   ],
+
+   "plushies" : [
+      {
+         "name" : "Fairy Tail Action Figures",
+         "image" : "assets/images/merchandise/p-1.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan" 
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/p-2.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/p-3.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/p-4.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      }
+   ],
+
+   "posters" : [
+      {
+         "name" : "Fairy Tail Action Figures",
+         "image" : "assets/images/merchandise/c&p-1.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan" 
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/c&p-2.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/c&p-3.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      },
+
+      {
+         "name" : "One Piece Action Figures",
+         "image" : "assets/images/merchandise/c&p-4.svg",
+         "price" : "₱1470.00",
+         "location" : "Marilao, Bulacan"
+      }
+   ]
+
+}

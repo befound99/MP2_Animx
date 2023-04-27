@@ -4,9 +4,131 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/checkout-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/422ef675b8.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
   <title>ANIMX Check Out Page</title>
 </head>
 <body>
-  <h1>AnimX</h1>
+
+  <div class="page-container">
+    <nav class="d-flex">
+      <div class="brand-container d-flex">
+        <a href="index.html" class="brand "><span>ANIMX</span></a>
+      </div>
+
+      <!-- nav items -->
+      <ul class="nav-items-container d-flex">
+        <li class="nav-items"><a href="index.html" class="nav-items1"><span>Manga</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
+        <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items4"><span>FAQ</span></a></li>
+      </ul>
+
+      <!-- Login/Cart -->
+      <ul class="login-cart-container d-flex">
+        <li class="cart"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span>0</span></li>
+        <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Products Section -->
+  
+  <div class="products-container">
+
+    <div class="products-header">
+      <h2 class="product-title">Product</h2>
+      <h2 class="price">Price</h2>
+      <h2 class="quantity">Quantity</h2>
+      <h2 class="total">Total</h2>
+    </div>
+
+    <div class="products">
+    
+    </div>
+
+  </div>
+
+  <!-- Payment Section -->
+
+  <form action="#" method="#">
+
+    <div class="payment-container">
+
+      <!-- Delivery Address -->
+
+      <div class="userAdd">
+
+        <h3>Delivery Address:</h3>
+        <p>Chuo St. Akihabara, Tokyo, Japan</p>
+
+      </div>
+
+      <br>
+
+      <!-- Coupon -->
+
+      <div class="useCou">
+
+        <h3>ANIMX Code:</h3>
+        <input type="text" id="coupon-input" placeholder="Enter coupon code">
+        <button id="apply-coupon-btn">Apply Coupon</button>
+
+      </div>
+
+      <br>
+
+      <div class="usePay">
+
+        <h3>Payment Option:</h3>
+        <select name="#" id="payment">
+          <option value="#">COD</option>
+          <option value="#">G-Cash</option>
+        </select>
+
+      </div>
+
+    </div>
+
+    <br>
+
+    <!-- Delivery Note -->
+
+    <div class="delivery-container">
+
+      <div class="delivery-message">
+
+        <h3>Message:</h3>
+
+      </div>
+
+      <div class="note">
+
+        <textarea name="userNote" id="userNote" rows="3"></textarea>
+
+      </div>
+
+      <!-- Check Out -->
+      
+      <div class="checkout-container">
+
+        <input class="cheBut" id="cheBut" type="button" value="Check Out">
+
+      </div>
+
+    </div>
+
+  </form>
+
+  <br>
+
+  <footer></footer>
+    
+  <script src="assets/script/index-script.js"></script>
+  <script src="assets/script/check-out-script.js"></script>
 </body>
 </html>
+

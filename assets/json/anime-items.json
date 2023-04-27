@@ -1,0 +1,40 @@
+{
+  "animes" : [
+    {
+      "title": "Mashle",
+      "genre": "Parody, Action, School Life",
+      "image": "assets/images/mashle-1680202211.png",
+      "price": "3400"
+    },
+    {
+      "title": "Kimetsu no Yaiba",
+      "genre": "Action, Adventure, Demons",
+      "image": "assets/images/kimetsu-no-yaiba-katanakaji-no-sato-hen-1680122874.jpg",
+      "price": "3600"
+    },
+    {
+      "title": "[Oshi no Ko]",
+      "genre": "Reincarnation, Psychological, Supernatural",
+      "image": "assets/images/Oshi-no-ko-anime.jpg",
+      "price": "3426"
+    },
+    {
+      "title": "My Hero Academia",
+      "genre": "Superhero, Action, School Life",
+      "image": "assets/images/Blonde-Boy.jpg",
+      "price": "3500"
+    },
+    {
+      "title": "My Love Story With Yamada-kun at Lv999",
+      "genre": "Romance, Comedy, Video Games",
+      "image": "assets/images/yamada-xmas.jpg",
+      "price": "3400"
+    },
+    {
+      "title": "Tengoku-Daimakyou",
+      "genre": "Survival, Adventure, Monsters",
+      "image": "assets/images/Tengoku Daimakyou.jpg",
+      "price": "3426"
+    }
+  ]
+}

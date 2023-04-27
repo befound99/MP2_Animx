@@ -4,11 +4,195 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <script src="https://kit.fontawesome.com/c6771b9339.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index-style.css">
+  <title>Animx | Bringing Your Favorite Anime and Manga to Life</title>
 </head>
 <body>
-  
-  
-  
+  <script src="assets/script/index-script.js" defer></script>
+  <script src="assets/script/check-out-script.js" defer></script>
+  <div class="page-container">
+    <!-- Nav -->
+    <nav class="d-flex">
+      <!-- Brand -->
+      <div class="brand-container d-flex">
+        <a href="#" class="brand "><span>ANIMX</span></a>
+      </div>
+
+      <!-- nav items -->
+      <ul class="nav-items-container d-flex">
+        <li class="nav-items"><a href="manga.html" class="nav-items1"><span>Manga</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
+        <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items4"><span id="faqBtn">FAQ</span></a></li>
+      </ul>
+
+      <!-- Login/Cart -->
+      <ul class="login-cart-container d-flex">
+        <li class="cart relative"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="absolute cart-item-number">0</span></li>
+        <li><a href="#"><i class="fa-solid fa-circle-user" id="userLoginBtn"></i></a></li>
+      </ul>
+
+      <!-- Burger/Menu Button -->
+        <button class="burger-btn"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+      <!-- HEADER -->
+    <header class="d-flex flex-col">
+      <div class="slogan-body d-flex flex-col">
+        <div class="slogan-container d-flex flex-col">
+          <p class="slogan">Bring Your Favorite Anime and Manga to Life</p>
+        </div>
+      </div>
+      <div class="search-bar d-flex">
+        <input type="search" placeholder="Search">
+        <button class="filter-btn" class="d-flex">
+          <span>
+            Filter
+          </span>
+          <i class="fa-solid fa-filter"></i>
+        </button>
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </header>
+      
+    <!-- section body -->
+    <div class="section-body1 d-flex flex-col">
+      <!-- <div class="carousel">
+         FUTURE CAROUSEL HERE
+      </div> -->
+      <div class="section-container d-flex">
+        <div class="section-container-left d-flex flex-col">
+          <!-- Manga Section -->
+          <section class="section d-flex flex-col">
+            <div class="section-header d-flex">
+              <span class="section-name">Manga</span>
+              <a href="#" ><button class="viewmore-btn transition-default">View More</button></a>
+            </div>
+            <!-- Card container -->
+            <div class="manga-section-body d-flex">
+              <!-- Manga Cards go here -->
+
+              <!-- ^ Manga Cards go here ^ -->
+            </div>
+            <!-- Card container end-->
+          </section>
+          <!-- Manga Section end-->
+
+          
+
+          <!-- Anime Section -->
+          <section class="section d-flex flex-col">
+            <div class="section-header d-flex">
+              <span class="section-name">Anime</span>
+              <a href="#" ><button class="viewmore-btn transition-default">View More</button></a>
+            </div>
+            <!-- Card container -->
+            <div class="anime-section-body d-flex">
+              <!-- Anime card goes here -->
+              
+
+              <!-- ^Anime card goes here^ -->
+            </div>
+            <!-- Card container end-->
+          </section>
+          <!-- Anime Section end-->
+        </div>
+        <div class="section-container-right d-flex">
+          <!-- Merchandise Sections -->
+          <section class="merchandise">
+            <div class="merchandise-header d-flex">
+              <span class="section-name">Merchandise</span>
+              <a href="#"><button class="viewmore-btn transition-default">View More</button></a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Modal FAQ -->
+    <div id="faqModal" class="modalFaq">
+      <!-- Modal content -->
+      <div class="modal-content-faq">
+        <span class="closeFaq">&times;</span>
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">What are the shipping options?</div>
+            <div class="accordion-content">
+              <p>We offer standard and express shipping options. Standard shipping takes 5-7 business days, while express shipping takes 2-3 business days.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">What payment methods do you accept?</div>
+            <div class="accordion-content">
+              <p>We accept all major credit cards, PayPal, and Apple Pay.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">Can I return an item?</div>
+            <div class="accordion-content">
+              <p>Yes, we accept returns within 30 days of delivery. Please contact us to initiate the return process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Log in Modal -->
+
+    <div id="loginModal" class="modalLogin">
+      <div class="modal-content-login">
+        <span class="closeLogin">&times;</span>
+        <h2>Log in</h2>
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Log in</button>
+        </form>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+    </div>
+
+
+    
+
+    <!-- section body end-->
+    <footer class="d-flex flex-col">
+      <div class="footer-contacts-body d-flex">
+        <div class="footer-contacts-container d-flex">
+          <div class="footer-contacts-left">
+            <p>Follow Us</p>
+            <ul class="footer-social-icons d-flex">
+              <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-square-reddit"></i></a></li>
+            </ul>
+          </div>
+          <div class="footer-contacts-right">
+            <p>Contact Us</p>
+            <ul class="footer-email">
+              <li><a href="#"><span>help@animx.com</span></a></li>
+              <li><a href="#"><span>support@animx.com</span></a></li>
+              <li><a href="#"><span>order@animx.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-base d-flex">
+        <span>
+          © 2023 Animx ARR. Images are subject to copyright from their respective publishers.
+          Business Registration No.: 09XXX-XXXX-XXXXX. Philippine National Book Development Board Registered Book Seller and Commercial Book Importer.
+        </span>
+      </div>
+    </footer>
+  </div>
+
 </body>
 </html>

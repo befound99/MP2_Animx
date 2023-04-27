@@ -1,0 +1,722 @@
+/* Default margin and Padding  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* utility classes */
+.d-flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.transition-default {
+  transition: all 250ms ease;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+/* Colors */
+:root {
+  --color60: whitesmoke;
+  --color30: #d6d6d6;
+  --colors10: #D16923;
+}
+.opacity {
+  opacity: 0;
+}
+.opacity:hover {
+  opacity: 1;
+}
+::selection {
+  background-color: #D16923;
+  color: whitesmoke;
+}
+
+/* Pag container */
+.page-container {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.151)), 
+    url(../images/Blonde-Boy.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* navbar */
+nav {
+  width: clamp(320px, 95%, 1440px);
+  margin-inline: auto;
+  background-color: rgba(214, 214, 214, 0.40);
+  backdrop-filter: invert(80%) blur(2px);
+  border-radius: 5px;
+  justify-content: space-between;
+  padding-block: 5px;
+  position: sticky;
+  top: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* brand */
+.brand-container {
+  width: fit-content;
+  margin-left: 1rem;
+}
+
+.brand {
+  align-self: center;
+  margin-inline: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(40px, 5vmin, 5vmin);
+  font-weight: 300;
+  color: var(--colors10);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.705);
+  text-decoration: none;
+  transition: all 250ms ease;
+}
+
+.brand:hover{
+  text-shadow: 0 0 20px #D16923;
+}
+
+/* nav items */
+.nav-items-container {
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-items-container a {
+  text-decoration: none;
+}
+
+.nav-items span{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color60);
+  padding: 0 1rem;
+  border-radius: 5px;
+  text-shadow: 0 0 10px black;
+  transition: all 250ms ease;
+  font-family: 'Roboto', sans-serif;
+}
+.nav-items span:hover{
+  background-color: #D16923;
+  box-shadow: 0 0 10px #D16923;
+}
+@media (width <= 1000px ) {
+  .nav-items-container, .login-cart-container{
+    display: none;
+  }
+  nav {
+    justify-content: center;
+  }
+}
+@media (width <= 370px) {
+  nav {
+    justify-content: flex-start;
+  }
+}
+/* Login and Cart */
+.login-cart-container{
+  width: 10vw;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+.login-cart-container i {
+  font-size: 1.5rem;
+  color: var(--color60);
+  text-shadow: 0 0 5px black;
+}
+.login-cart-container li {
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: all 250ms ease;
+}
+.login-cart-container li:hover {
+  background-color: var(--colors10);
+  box-shadow: 0 0 10px var(--colors10);
+}
+.cart {
+  display: flex;
+}
+.cart-item-number {
+  background-color: #D16923;
+  padding: 0 7px ;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  color: whitesmoke;
+}
+
+/* Burger/Menu Button */
+
+.burger-btn {
+  font-size: 2rem;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 0;
+  align-self: center;
+  height: 100%;
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 30px);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.40);
+  display: none;
+}
+@media (width <= 1000px) {
+  .burger-btn {
+    display: inline;
+  }
+}
+/* Header */
+header {
+  width: clamp(320px, 100%, 100%);
+  height: 60vh;
+  padding: 2rem 0 2rem 0;
+  justify-content: end;
+  align-items: center;
+}
+
+/* Slogan */
+.slogan-body {
+  width: clamp(320px, 95%, 1440px);
+  flex-grow: 1;
+  align-items: end;
+  justify-content: center;
+}
+.slogan-container {
+  height: 90%;
+  width: 50%;
+  justify-content: center;
+  padding-left: 2rem;
+  border-left: #d6d6d6 5px solid; 
+}
+.slogan {
+  font-size: clamp(25px, 5vmin, 5vmin);
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Search bar */
+.search-bar {
+  width: clamp(320px, 95%, 1440px);
+  height: 55px;
+  background-color: rgba(214, 214, 214, 0.40);
+  backdrop-filter: blur(6px);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  justify-content: end;
+}
+@media (width <= 1000px){
+  .search-bar {
+    display: none;
+  }
+}
+.search-bar input {
+  height: 100%;
+  border: 0;
+  flex-grow: 1;
+  background-color: transparent;
+  padding-inline: 1rem;
+  color: whitesmoke;
+}
+.search-bar input:focus {
+  outline: 0;
+}
+.search-bar input::placeholder {
+  color: whitesmoke;
+}
+.filter-btn {
+  border: 0;
+  border-right: 2px solid rgb(92, 92, 92);
+  color: whitesmoke;
+  width: 100px;
+  background-color: transparent;
+}
+.filter-btn:hover {
+  cursor: pointer;
+}
+.filter-btn span {
+  margin: 0 15px 0 0;
+}
+.search-btn {
+  border: 0;
+  width: 50px;
+  background-color: transparent;
+  color: whitesmoke;
+}
+.search-btn:hover {
+  cursor: pointer;
+}
+
+/* Section */
+.section-body1 {
+  min-width: 320px;
+  background-color: var(--color60);
+}
+.carousel {
+  width: 100%;
+  height: 40vh;
+  background-image: linear-gradient(var(--colors10), #b4591d);
+}
+.section-container {
+  flex-grow: 1;
+  margin: 2rem 0;
+}
+
+/* Section Defaults */
+.section-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+}
+.viewmore-btn{
+  border: 2px solid #D16923;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  color: #D16923;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.viewmore-btn:hover {
+  box-shadow: 0 0 10px #D16923;
+  cursor: pointer;
+}
+section {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+/* Card and Card Details */
+.card-group-anime {
+  margin: 1rem;
+  width: clamp(300px, 15vw, 15vw);
+}
+/* card cover */
+
+.card-anime {
+  background-color: lightsalmon;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  justify-content: end;
+  transition: all 250ms;
+  overflow: hidden;
+}
+.card-anime:hover {
+  transform: scale(1.1);
+}
+@media (width <= 1000px) {
+  .section-container {
+    flex-direction: column;
+  }
+}
+/* Left Section */
+.section-container-left {
+  width: 70%;
+  padding-top: 1rem;
+  padding-inline: clamp(0.1px,2vw,1rem);
+}
+
+/* Manga Section */
+.section {
+  border-radius: 5px;
+  background-color: #d6d6d6;
+  min-width: 310px;
+  margin-bottom: 1rem;
+}
+.section-header {
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.manga-section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.anime-section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.section-body {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media (width <= 502px){
+  .section-body {
+    justify-content: center;
+  }
+} 
+
+/* manga cards */
+.card-group-manga {
+  margin: 0 1rem 1rem 1rem;
+}
+.card-manga {
+  position: relative;
+  width: clamp(180px, 10vw, 10vw);
+  height: clamp(270px, 15vw, 15vw);
+  display: flex;
+  flex-direction: column;
+  transition: all 250ms;
+}
+.card-manga:hover {
+  transform: scale(1.1);
+}
+.card-manga > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.action-div {
+  background: linear-gradient(rgba(0, 0, 0,0.2),rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.8));
+  flex-grow: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  opacity: 0;
+  transition: all 250ms;
+}
+.action-div:hover {
+  opacity: 1;
+}
+.quickview-container {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.quickview-btn {
+  height: fit-content;
+  padding: 5px 10px;
+  background-color: #D16923;
+  color: whitesmoke;
+  border: 0;
+  border-radius: 5px;
+  transition: all 250ms;
+  cursor: pointer;
+  font-size: clamp(12px, 1vw, 1vw);
+  display: flex;
+  align-items: center;
+}
+.fa-regular.fa-eye{
+  margin-left: 5px;
+}
+.quickview-btn:hover {
+  transform: scale(1.1);
+}
+.actions-container {
+  display: flex;
+
+}
+.actions-container > button {
+  padding-block: 5px;
+  font-size: clamp(12px, 1vw, 1vw);
+  flex-grow: 1;
+  margin: 1vmin;
+  border: 0;
+  border-radius: 5px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.actions-container > button:nth-child(1) {
+  background-color: #D16923;
+  transition: all 250ms;
+}
+.actions-container > button:nth-child(1):hover {
+  transform: scale(1.1);
+}
+.actions-container > button:nth-child(2) {
+  background-color: #bd1f3e;
+}
+.actions-container > button:nth-child(3) {
+  background-color: #4e8f0c;
+}
+/* manga details */
+.manga-details {
+  width: 10vw;
+}
+.manga-title {
+  font-weight: 800;
+  color: #D16923;
+  font-size: clamp(20px, 1vw, 1vw);
+}
+.manga-price {
+  color: #4e8f0c;
+}
+.manga-genre {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: clamp(14px, 0.8vw, 0.8vw);
+}
+
+/* Anime Cards */
+.card-group-anime {
+  margin: 0 1rem 1rem 1rem;
+}
+.card-anime {
+  display: flex;
+  position: relative;
+  height: clamp(180px, 10vw, 10vw);
+  width: clamp(270px, 15vw, 15vw);
+  display: flex;
+  flex-direction: column;
+  transition: all 250ms;
+}
+.card-anime > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.anime-action-div {
+  flex-grow: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: all 250ms;
+}
+.anime-action-div:hover {
+  opacity: 100%;
+}
+.anime-quickview-container {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+.anime-quickview-container button {
+  border: 0;
+  border-radius: 5px;
+  background-color: #D16923;
+  color: whitesmoke;
+  padding: 5px 10px;
+  font-size: clamp(12px, 1vw, 1vw);
+  cursor: pointer;
+  transition: all 250ms;
+}
+.anime-quickview-container button:hover {
+  transform: scale(1.1);
+}
+/* Anime Details */
+.anime-title {
+  font-weight: 800;
+  color: #D16923;
+  font-size: clamp(20px, 1vw, 1vw);
+}
+.anime-genre {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: clamp(14px, 0.8vw, 0.8vw);
+}
+.anime-price {
+  color: #4e8f0c;
+}
+/* Right Section */
+.section-container-right {
+  width: 30%;
+  padding-block: 1rem;
+  padding-inline: clamp(0.1px,2vw,1rem);
+}
+@media (width <= 1000px){
+  .section-container-right {
+    height: 50vh;
+    width: 100%;
+  }
+  .section-container-left {
+    width: 100%;
+  }
+}
+
+/* Merchandise */
+.merchandise {
+  width: 100%;
+  background-color: #d6d6d6;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.merchandise-header {
+  align-items: center;
+  justify-content: space-between;
+}
+/* footer */
+footer {
+  height: 20vh;
+  font-family: 'Roboto', sans-serif;
+}
+.footer-contacts-body {
+  flex-grow: 1;
+  background-color: var(--color60);
+  padding-block: 1rem;
+  padding-inline: clamp(0.1px,2vw,1rem);
+}
+.footer-contacts-container {
+  background-color: #d6d6d6;
+  flex-grow: 1;
+  border-radius: 5px;
+}
+@media (width <= 490px) {
+  .footer-contacts-container {
+    flex-direction: column;
+  }
+}
+.footer-contacts-left, .footer-contacts-right {
+  flex-grow: 1;
+  padding-left: 3rem;
+  padding-block: 1rem;
+}
+.footer-social-icons {
+  list-style-type: none;
+  font-size: 2rem;
+}
+.footer-social-icons li {
+  margin-right: 5px;
+}
+.footer-social-icons a {
+  color: #D16923;
+}
+.footer-email {
+  list-style-type: none;
+}
+.footer-email a {
+  text-decoration: none;
+  color: #D16923;
+}
+.footer-base {
+  background-color: #D16923;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Modal Faq */
+.modalFaq {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content-faq {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.closeFaq {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeFaq:hover,
+.closeFaq:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Accordion */
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+}
+
+.accordion-content-visible {
+  display: block;
+}
+
+
+/* Login Modal */
+/* The Modal (background) */
+.modalLogin {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content-login {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.closeLogin {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeLogin:hover,
+.closeLogin:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
