@@ -1,7 +1,7 @@
 //Manga cards maker
 export async function fetchMangas(){
     // fetch .json for mangas
-    const response = await fetch("assets/json/manga-items.json");
+    const response = await fetch("assets/json/manga-item.json");
     
     // Converts .json to .js;
     const data = await response.json();
