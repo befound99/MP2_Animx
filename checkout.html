@@ -14,7 +14,9 @@
 <body>
 
   <div class="page-container">
+    <!-- Nav -->
     <nav class="d-flex">
+      <!-- Brand -->
       <div class="brand-container d-flex">
         <a href="index.html" class="brand "><span>ANIMX</span></a>
       </div>
@@ -24,52 +26,61 @@
         <li class="nav-items"><a href="manga.html" class="nav-items1"><span>Manga</span></a></li>
         <li class="nav-items"><a href="anime.html" class="nav-items2"><span>Anime</span></a></li>
         <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
-        <li class="nav-items"><a href="#" class="nav-items4"><span>FAQ</span></a></li>
+        <li class="nav-items"><a href="#" class="nav-items4"><span id="faqBtn">FAQ</span></a></li>
       </ul>
 
       <!-- Login/Cart -->
       <ul class="login-cart-container d-flex">
-        <li class="cart"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span>0</span></li>
-        <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+        <li class="cart relative"><a href="checkout.html">
+          <i class="fa-solid fa-cart-shopping"></i></a>
+          <span class="absolute cart-item-number">0</span></li>
+        <li id="userLoginBtn">
+          <a href="#"><i class="fa-solid fa-circle-user" ></i></a>
+        </li>
       </ul>
+
+      <!-- Burger/Menu Button -->
+        <button class="burger-btn"><i class="fa-solid fa-bars"></i></button>
     </nav>
-  </div>
-
-  <!-- Products Section -->
-  
-  <div class="products-container">
-
-    <div class="products-header">
-      <h2 class="product-title">Product</h2>
-      <h2 class="price">Price</h2>
-      <h2 class="quantity">Quantity</h2>
-      <h2 class="total">Total</h2>
-    </div>
-
-    <div class="products">
+      <!-- HEADER -->
     
-    </div>
-
   </div>
 
-  <!-- Payment Section -->
+    <!-- Products Section -->
+  
+    <div class="products-container">
 
-  <form action="#" method="#">
-
-    <div class="payment-container">
-
-      <!-- Delivery Address -->
-
-      <div class="userAdd">
-
-        <h3>Delivery Address:</h3>
-        <p>Chuo St. Akihabara, Tokyo, Japan</p>
-
+      <div class="products-header">
+        <h2 class="product-title">Product</h2>
+        <h2 class="price">Price</h2>
+        <h2 class="quantity">Quantity</h2>
+        <h2 class="total">Total</h2>
       </div>
 
-      <br>
+      <div class="products">
+      
+      </div>
 
-      <!-- Coupon -->
+    </div>
+
+    <!-- Payment Section -->
+
+    <form action="#" method="#">
+
+      <div class="payment-container">
+
+        <!-- Delivery Address -->
+
+        <div class="userAdd">
+
+          <h3>Delivery Address:</h3>
+          <p>Chuo St. Akihabara, Tokyo, Japan</p>
+
+        </div>
+
+        <br>
+
+        <!-- Coupon -->
 
       <div class="useCou">
 
@@ -125,8 +136,35 @@
 
   <br>
 
-  <footer></footer>
-    
+  <footer class="d-flex flex-col">
+    <div class="footer-contacts-body d-flex">
+      <div class="footer-contacts-container d-flex">
+        <div class="footer-contacts-left">
+          <p>Follow Us</p>
+          <ul class="footer-social-icons d-flex">
+            <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-reddit"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts-right">
+          <p>Contact Us</p>
+          <ul class="footer-email">
+            <li><a href="#"><span>help@animx.com</span></a></li>
+            <li><a href="#"><span>support@animx.com</span></a></li>
+            <li><a href="#"><span>order@animx.com</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base d-flex">
+      <span>
+        © 2023 Animx ARR. Images are subject to copyright from their respective publishers.
+        Business Registration No.: 09XXX-XXXX-XXXXX. Philippine National Book Development Board Registered Book Seller and Commercial Book Importer.
+      </span>
+    </div>
+  </footer>
   <script src="assets/script/index-script.js"></script>
   <script src="assets/script/check-out-script.js"></script>
 </body>
