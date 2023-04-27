@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://kit.fontawesome.com/3a365c6802.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="assets/css/manga-styles.css">
+   <title>Animx | Manga Online Bookstore</title>
+</head>
+
+<body>
+
+   <!-- Nav -->
+   <nav class="d-flex">
+      <!-- Brand -->
+      <div class="brand-container d-flex">
+         <a href="#" class="brand "><span>ANIMX</span></a>
+      </div>
+   
+      <!-- nav items -->
+      <ul class="nav-items-container d-flex">
+         <li class="nav-items"><a href="#" class="nav-items1"><span>Manga</span></a></li>
+         <li class="nav-items"><a href="#" class="nav-items2"><span>Anime</span></a></li>
+         <li class="nav-items"><a href="merch.html" class="nav-items3"><span>Merchandise</span></a></li>
+         <li class="nav-items"><a href="#" class="nav-items4"><span id="faqBtn">FAQ</span></a></li>
+      </ul>
+   
+      <!-- Login/Cart -->
+      <ul class="login-cart-container d-flex">
+         <li class="cart relative"><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a><span
+               class="absolute cart-item-number">0</span></li>
+         <li><a href="#"><i class="fa-solid fa-circle-user" id="userLoginBtn"></i></a></li>
+      </ul>
+   
+      <!-- Burger/Menu Button -->
+      <button class="burger-btn"><i class="fa-solid fa-bars"></i></button>
+   </nav>
+
+   <div class="content-container d-flex">
+
+      <!-- Filter: By Genres, Series, and Price Range -->
+      <aside>
+         <!-- Start of Genre Checkbox  -->
+         <div class="genre">
+            <p>Genre</p>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="action" value="genre1">
+               <label for="genre1">Action</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="adventure" value="genre2">
+               <label for="genre2">Adventure</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="comedy" value="genre3">
+               <label for="genre3">Comedy</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="drama" value="genre4">
+               <label for="genre4">Drama</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="fantasy" value="genre5">
+               <label for="genre5">Fantasy</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="music" value="genre6">
+               <label for="genre6">Music</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="romance" value="genre7">
+               <label for="genre7">Romance</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="sci-fi" value="genre8">
+               <label for="genre8">Sci-Fi</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="seinen" value="genre9">
+               <label for="genre9">Seinen</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="shojo" value="genre10">
+               <label for="genre10">Shojo</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="shonen" value="genre11">
+               <label for="genre11">Shonen</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="slice-of-life" value="genre12">
+               <label for="genre12">Slice of Life</label>
+            </div>
+            <div class="genre-checkbox">
+               <input type="checkbox" name="genre" id="sports" value="genre13">
+               <label for="genre13">Sports</label>
+            </div>
+         </div>
+         
+         <div class="price-range">
+            <p>Price Range</p>
+            <div class="price-checkbox">
+               <input type="checkbox" name="price-range1" id="price-range1">
+               <label for="price-range1">Lower than ₱500</label>
+            </div>
+            <div class="price-checkbox">
+               <input type="checkbox" name="price-range2" id="price-range2">
+               <label for="price-range2">₱500 - ₱1000</label>
+            </div>
+            <div class="price-checkbox">
+               <input type="checkbox" name="price-range3" id="price-range3">
+               <label for="price-range2">Higher than ₱1000</label>
+            </div>
+         </div>
+                       
+      </aside>
+
+      <!-- Manga Content Container -->
+      <section>
+
+         <!-- start Sort By button -->
+         <div class="sort-by">
+            <label for="sort-by-dropdown">Sort By:</label>
+            <select id="sort-by-dropdown">
+               <option value="0" selected></option>
+               <option value="1" id="price-asc"> Price (Low to High)</option>
+               <option value="2" id="price-desc"> Price (High to Low)</option>
+               <option value="3" id="name-asc"> Name (A to Z)</option>
+               <option value="4" id="name-desc"> Name (Z to A)</option>
+            </select>
+         </div>
+         <!-- end of Sort by button -->
+
+         <!-- start of manga section  -->
+         <div class="tab-container">
+            <!-- Tab Buttons -->
+            <div class="tab">
+               <button class="tablinks">Manga</button>
+            </div>
+         
+            <div class="manga-section-body d-flex">
+               <!-- Manga Cards go here -->
+            
+               <!-- ^ Manga Cards go here ^ -->
+            </div>
+
+         </div>
+         <!-- end of manga section -->
+      </section>
+
+   </div>
+
+   <footer class="d-flex flex-col">
+         <div class="footer-contacts-body d-flex">
+            <div class="footer-contacts-container d-flex">
+               <div class="footer-contacts-left">
+                  <p>Follow Us</p>
+                  <ul class="footer-social-icons d-flex">
+                     <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                     <li><a href="#"><i class="fa-brands fa-square-reddit"></i></a></li>
+                  </ul>
+               </div>
+               <div class="footer-contacts-right">
+                  <p>Contact Us</p>
+                  <ul class="footer-email">
+                     <li><a href="#"><span>help@animx.com</span></a></li>
+                     <li><a href="#"><span>support@animx.com</span></a></li>
+                     <li><a href="#"><span>order@animx.com</span></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="footer-base d-flex">
+            <span>
+               © 2023 Animx ARR. Images are subject to copyright from their respective publishers.
+               Business Registration No.: 09XXX-XXXX-XXXXX. Philippine National Book Development Board Registered Book
+               Seller and Commercial Book Importer.
+            </span>
+         </div>
+      </footer>
+
+
+   <script src="assets/script/index-script.js"></script>
+   <script src="assets/script/manga-script.js"></script>
+</body>
+
+</html>
