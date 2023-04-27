@@ -1,32 +1,36 @@
 // Fetch Product JSON
- async function fetchProducts(){
+async function fetchProducts() {
   const res = await fetch("assets/script/products.json");
   const data = await res.json();
   const carts = document.querySelectorAll('.add-to-cart-btn');
-  // const carts2 = document.querySelectorAll('.add-to-cart-btn2');
+  const carts2 = document.querySelectorAll('.add-to-cart-btn2');
   const products = data.products;
-  // const products2 = data.products2;
+  const products2 = data.products2;
+  
 
-  console.log(products);
+  console.log("products:", products);
+  console.log("products2:", products2);
 
-    carts.forEach((cart, i) => {
-      cart.addEventListener('click', () => {
-        cartNumbers(products[i]);
-        subCost(products[i]);
-      });
+  carts.forEach((cart, i) => {
+    console.log("products[i]:", products[i]);
+    cart.addEventListener('click', () => {
+      cartNumbers(products[i]);
+      subCost(products[i]);
     });
-    
-    // carts2.forEach((cart, i) => {
-    //   cart.addEventListener('click', () => {
-    //     cartNumbers(products2[i]);
-    //     subCost(products2[i]);
-    //   });
-    // });
-    
-  };
+  });
 
+  carts2.forEach((cart, i) => {
+    console.log("products[i]:", products[i]);
+    cart.addEventListener('click', () => {
+      cartNumbers(products2[i]);
+      subCost(products2[i]);
+    });
+  });
+
+  // ...
+}
+  
   const cart = document.querySelector('.cart span');
-  console.log(cart);
 
   function onLoadCartNumbers() {
     let productNumbers = parseInt(localStorage.getItem('cartNumbers'));
@@ -40,33 +44,42 @@
   }
   
 
-function cartNumbers(product) {
-  let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
-  let productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
-  
-  if (cartItems[product.tag]) {
-    cartItems[product.tag].inCart += 1;
-  } else {
-    cartItems[product.tag] = {...product, inCart: 1};
+  function cartNumbers(product) {
+    let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
+    let productNumbers = parseInt(localStorage.getItem('cartNumbers')) || 0;
+    
+    if (product && product.tag) { // add conditional statement to check for product and product.tag
+      if (cartItems[product.tag]) {
+        cartItems[product.tag].inCart += 1;
+      } else {
+        cartItems[product.tag] = {...product, inCart: 1};
+      }
+    
+      localStorage.setItem('cartNumbers', productNumbers + 1);
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    
+      cart.textContent = productNumbers + 1;
+    } else {
+      console.log("Error: product is undefined or does not have a tag property.");
+    }
   }
   
-  localStorage.setItem('cartNumbers', productNumbers + 1);
-  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+  function setItems(product) {
+    let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
   
-  cart.textContent = productNumbers + 1;
-}
-
-function setItems(product) {
-  let cartItems = JSON.parse(localStorage.getItem('productsInCart')) || {};
-
-  if (!cartItems[product.tag]) {
-    cartItems[product.tag] = {...product, inCart: 0};
+    if (product && product.tag) { // add conditional statement to check for product and product.tag
+      if (!cartItems[product.tag]) {
+        cartItems[product.tag] = {...product, inCart: 0};
+      }
+  
+      cartItems[product.tag].inCart += 1;
+  
+      localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    } else {
+      console.log("Error: product is undefined or does not have a tag property.");
+    }
   }
-
-  cartItems[product.tag].inCart += 1;
-
-  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-}
 
 
 
